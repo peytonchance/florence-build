@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 354 276" style="enable-background:new 0 0 354 276;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C0D5D0;}
+	.st1{fill:none;stroke:#C0D5D0;stroke-width:5;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{font-family:'Geomanist-Bold';}
+	.st4{font-size:48px;}
+	.st5{letter-spacing:9;}
+	.st6{opacity:0.48;fill:#C0D5D0;}
+</style>
+<g>
+	<path class="st0" d="M20.2,189.6l25.6-94.1c1.5-5.6,7.3-8.9,12.9-7.4l184.5,50.2c5.6,1.5,8.9,7.3,7.4,12.9L225,245.3
+		c-1.5,5.6-7.3,8.9-12.9,7.4L27.6,202.5C22,201,18.7,195.2,20.2,189.6z"/>
+	<path class="st1" d="M35.9,186.7L57.8,106c0.8-2.8,3.7-4.5,6.5-3.8l166.8,45.3c2.8,0.8,4.5,3.7,3.8,6.5L213,234.9
+		c-0.8,2.8-3.7,4.5-6.5,3.8L39.6,193.3C36.8,192.5,35.1,189.6,35.9,186.7z"/>
+	
+		<ellipse transform="matrix(0.2623 -0.965 0.965 0.2623 -62.0813 256.0694)" class="st0" cx="136.4" cy="168.6" rx="33.3" ry="24.2"/>
+	<rect x="89.8" y="155.6" transform="matrix(0.2623 -0.965 0.965 0.2623 -87.372 266.8023)" class="st2" width="82" height="69.9"/>
+	<text transform="matrix(0.965 0.2623 -0.2623 0.965 120.2736 181.1563)" class="st0 st3 st4 st5">$</text>
+</g>
+<g>
+	<path class="st6" d="M88.8,123.9L141.6,42c3.1-4.9,9.6-6.3,14.5-3.1l160.7,103.6c4.9,3.1,6.3,9.6,3.1,14.5l-52.8,81.9
+		c-3.1,4.9-9.6,6.3-14.5,3.1L91.9,138.4C87,135.3,85.6,128.8,88.8,123.9z"/>
+	<path class="st0" d="M96.8,118.9L149.6,37c3.1-4.9,9.6-6.3,14.5-3.1l160.7,103.6c4.9,3.1,6.3,9.6,3.1,14.5l-52.8,81.9
+		c-3.1,4.9-9.6,6.3-14.5,3.1L99.9,133.4C95,130.3,93.6,123.8,96.8,118.9z"/>
+	<path class="st1" d="M112.6,120.9l45.3-70.3c1.6-2.5,4.9-3.2,7.4-1.6l145.3,93.7c2.5,1.6,3.2,4.9,1.6,7.4l-45.3,70.3
+		c-1.6,2.5-4.9,3.2-7.4,1.6l-145.3-93.7C111.7,126.6,111,123.3,112.6,120.9z"/>
+	<ellipse transform="matrix(0.542 -0.8404 0.8404 0.542 -14.6591 241.1892)" class="st0" cx="213.9" cy="134" rx="33.3" ry="24.2"/>
+	
+		<rect x="160.9" y="118.3" transform="matrix(0.542 -0.8404 0.8404 0.542 -36.2692 239.8977)" class="st2" width="82" height="69.9"/>
+	<text transform="matrix(0.8404 0.542 -0.542 0.8404 194.6528 141.0134)" class="st0 st3 st4 st5">$</text>
+</g>
+</svg>
