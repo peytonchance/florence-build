@@ -1,0 +1,12 @@
+{
+  "name": "florence-build",
+  "version": "1.0.0",
+  "description": "A UI build from Viget mockups.",
+  "main": "index.js",
+  "repository": "https://github.com/peytonchance/florence-build",
+  "author": "Peyton Chance",
+  "license": "MIT",
+  "dependencies": {
+    "blendid": "^4.4.3"
+  }
+}
