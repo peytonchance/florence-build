@@ -1,19 +1,10 @@
-@font-face {
-    font-family: geomanist;
-    src: url(fonts/geomanist-regular-webfont.woff2);
-}
-
-@font-face {
-    font-family: geomanist-medium;
-    src: url(fonts/geomanist-medium-webfont.woff2);
-}
-
 body {
+  color: #504949;
   font-family: 'geomanist';
   font-size: 16px;
-  color: #504949;
   line-height: 1.6em;
-  @media (max-width: 600px){
+
+  @media (max-width: 600px) {
     text-align: center;
   }
 }
