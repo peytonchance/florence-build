@@ -9,63 +9,59 @@
 {% block content %}
 <div class="top-fold">
   <div class="title-box">
-  <p class="subtitle">A Viget Exploration</p>
+    <p class="subtitle">A Viget Exploration</p>
     <h1 class="title">
       <a href="/">
         <img src="images/title.svg" alt="Improving Medical Adherence" />
       </a>
     </h1>
-    <img src="images/yellow-pill.svg" alt="Yellow pill." class="yellow-pill">
-    <img src="images/pills.svg" alt="Green and light yellow pills." class="pills">
-    <img src="images/more-pills.svg" alt="Three pill tablets." class="more-pills">
-    <img src="images/purple-pills.svg" alt="Two purple pills." class="purple-pills">
+    <img src="images/yellow-pill.svg" alt="" class="yellow-pill">
+    <img src="images/pills.svg" alt="" class="pills">
+    <img src="images/more-pills.svg" alt="" class="more-pills">
+    <img src="images/purple-pills.svg" alt="" class="purple-pills">
   </div>
-    <nav class="pillbar">
-      <ul>
-        <a href="#box-one"><li class="left-end active">The Problem</li></a>
-        <a href="#key-factors" onclick="scroll(1)"><li>Key Factors</li></a>
-        <a href="#questions"><li>The Question</li></a>
-        <a href="#solution"><li class="right-end ">The Solution</li></a>
-      </ul>
-    </nav>
+  <nav class="pillbar">
+    <ul>
+      <li class="left-end active"><a href="#box-one">The Problem</a></li>
+      <li><a href="#key-factors" onclick="scroll(1)">Key Factors</a></li>
+      <li><a href="#questions">The Question</a></li>
+      <li class="right-end "><a href="#solution">The Solution</a></li>
+    </ul>
+  </nav>
 
-    <div class="box box-one">
-      <p class="main-thought">Patients who don’t take medication as prescribed are at risk of worsening health, increased hospitalization, and a greater chance of mortality.</p>
-      <p>Just in the U.S., non-adherence has been attributed to over $100 billion dollars in avoidable healthcare costs.<sup><a href="">1</a></sup> In developed countries, among patients with chronic illness, approximately 50% do not take medications as prescribed.<sup><a href="">2</a></sup></p>
+  <div class="box box-one">
+    <p class="main-thought">Patients who don’t take medication as prescribed are at risk of worsening health, increased hospitalization, and a greater chance of mortality.</p>
+    <p>Just in the U.S., non-adherence has been attributed to over $100 billion dollars in avoidable healthcare costs.<sup><a href="">1</a></sup> In developed countries, among patients with chronic illness, approximately 50% do not take medications as prescribed.<sup><a href="">2</a></sup></p>
 
-      <div class="quote">
-        <p class="quote-text">“Increasing the effectiveness of adherence interventions might have a greater impact on the health of the population than any improvement in specific medical treatment.”</p>
-        <p class="attribution">World Health Organization, 2005 <sup><a href="">3</a></sup><p>
-      </div>
-      <img src="images/pill-bottle.svg" alt="Short yellow pill bottle." class="pill-bottle">
-      <img src="images/pill-bottle2.svg" alt="Tall yellow pill bottle." class="pill-bottle2">
-      <img src="images/pill-bottle3.svg" alt="Red medicine bottle." class="pill-bottle3">
+    <blockquote class="quote">
+      <p class="quote-text">“Increasing the effectiveness of adherence interventions might have a greater impact on the health of the population than any improvement in specific medical treatment.”</p>
+      <p class="attribution">World Health Organization, 2005 <sup><a href="">3</a></sup><p>
+    </blockquote>
+    <img src="images/pill-bottle.svg" alt="" class="pill-bottle">
+    <img src="images/pill-bottle2.svg" alt="" class="pill-bottle2">
+    <img src="images/pill-bottle3.svg" alt="" class="pill-bottle3">
+  </div>
+
+  <div class="key-factors">
+    <h2 class="section-title">Why People Don't Adhere</h2>
+    <p class="section-intro">A myriad of factors conspire to prevent people from sticking to their treatment programs. But a few are most telling.</p>
+    <img src="images/gears.svg" alt="Simple human body." class="body">
+    <div class="factor-box factor-box-right comprehension">
+      <h3>Comprehension</h3>
+      <p>“All of that medical jargon doesn’t make much sense to me but I don’t want to bother the doctor with my silly questions.”</p>
     </div>
-
-    <div class="key-factors">
-      <h2 class="section-title">Why People Don't Adhere</h2>
-      <p class="section-intro">A myriad of factors conspire to prevent people from sticking to their treatment programs. But a few are most telling.</p>
-      <img src="images/body.svg" alt="Simple human body." class="body">
-      <div class="factor-box factor-box-right" class="comprehension">
-        <img src="images/gears.svg" alt="Yellow gears icon.">
-        <h3>Comprehension</h3>
-        <p>“All of that medical jargon doesn’t make much sense to me but I don’t want to bother the doctor with my silly questions.”</p>
-      </div>
-      <div class="factor-box factor-box-left denial">
-        <img src="images/heart.svg" alt="Heart icon.">
-        <h3>Denial</h3>
-        <p>“I feel just fine. I don’t know why that doctor thinks I’m sick. Why would I take medicine that I don’t need?”</p>
-      </div>
-      <div class="factor-box factor-box-right cost">
-        <img src="images/money.svg" alt="Money icon.">
-        <h3>Cost</h3>
-        <p>“I took my prescription to the pharmacy but they said it would cost several hundred dollars! I just couldn’t afford it.”</p>
-      </div>
-      <div class="factor-box factor-box-left complexity">
-        <img src="images/tally.svg" alt="Money icon.">
-        <h3>Complexity</h3>
-        <p>“Taking 15 medications every day is tough. Especially since they all have different instructions. How am I supposed to keep track of everything?”</p>
-      </div>
+    <div class="factor-box factor-box-left denial">
+      <h3>Denial</h3>
+      <p>“I feel just fine. I don’t know why that doctor thinks I’m sick. Why would I take medicine that I don’t need?”</p>
     </div>
+    <div class="factor-box factor-box-right cost">
+      <h3>Cost</h3>
+      <p>“I took my prescription to the pharmacy but they said it would cost several hundred dollars! I just couldn’t afford it.”</p>
+    </div>
+    <div class="factor-box factor-box-left complexity">
+      <h3>Complexity</h3>
+      <p>“Taking 15 medications every day is tough. Especially since they all have different instructions. How am I supposed to keep track of everything?”</p>
+    </div>
+  </div>
 </div>
 {% endblock %}

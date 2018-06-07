@@ -1,0 +1,105 @@
+/*----------- Key Factors -----------*/
+
+.key-factors {
+  color: $florence-gray;
+  margin-top: 150px;
+
+  @media (max-width: $screen-sm) {
+    margin-top: 100px;
+  }
+
+  h3 {
+    color: $florence-orange;
+    font-size: 1em;
+    margin-bottom: -8px;
+    text-transform: uppercase;
+  }
+}
+
+.section-title {
+  color: $florence-blue;
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.section-intro {
+  color: $florence-blue;
+  font-family: 'Merriweather';
+  font-size: 1.7em;
+  line-height: 1.6em;
+  margin: auto;
+  text-align: center;
+  width: 57vw;
+
+  @media (max-width: $screen-sm) {
+    font-size: 1.4em;
+    width: 85vw;
+  }
+}
+
+.body {
+  display: block;
+  margin: 50px auto;
+  width: 250px;
+}
+
+.factor-box {
+  background-color: $white;
+  border-radius: 9px;
+  font-size: 0.7em;
+  line-height: 1.4em;
+  overflow-x: visible;
+  padding: 25px;
+  position: relative;
+  width: 250px;
+
+
+  &:before {
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 98px;
+  }
+
+  &-left {
+    border-radius: 37% 8px 8px 37%;
+    right: 0;
+
+    &:before {
+      left: -80px;
+    }
+  }
+
+  &-right {
+    border-radius: 8px 37% 37% 8px;
+    left: 0;
+
+    &:before {
+      right: -70px;
+    }
+  }
+
+  &.comprehension:before {
+    background-image: url('../icons/gears.png');
+  }
+
+  &.denial:before {
+    background-image: url('../icons/heart.png');
+  }
+
+  &.cost:before {
+    background-image: url('../icons/money.png');
+  }
+
+  &.complexity:before {
+    background-image: url('../icons/tally.png');
+  }
+}
