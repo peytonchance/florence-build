@@ -1,6 +1,9 @@
 /*----------- Key Factors -----------*/
 
 .key-factors {
+  // background-image: url('../images/body.svg');
+  // background-position: center;
+  // background-repeat: no-repeat;
   color: $florence-gray;
   margin-top: 150px;
 
@@ -40,10 +43,10 @@
   }
 }
 
-.body {
-  display: block;
-  margin: 50px auto;
-  width: 250px;
+.factor-bg {
+  background-image: url('../images/body.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .factor-box {
@@ -70,7 +73,7 @@
   }
 
   &-left {
-    border-radius: 37% 8px 8px 37%;
+    border-radius: 999px 8px 8px 999px;
     right: 0;
 
     &:before {
@@ -79,7 +82,7 @@
   }
 
   &-right {
-    border-radius: 8px 37% 37% 8px;
+    border-radius: 8px 999px 999px 8px;
     left: 0;
 
     &:before {
