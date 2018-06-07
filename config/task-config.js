@@ -2,11 +2,11 @@ module.exports = {
   html        : true,
   images      : true,
   fonts       : true,
-  static      : true,
-  svgSprite   : true,
-  ghPages     : true,
+  static      : false,
+  svgSprite   : false,
+  ghPages     : false,
   stylesheets : true,
-  icons: true,
+  icons       : false,
 
   javascripts: {
     entry: {

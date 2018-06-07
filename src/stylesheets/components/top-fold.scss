@@ -21,7 +21,7 @@
 
   .subtitle {
     color: $florence-blue-green;
-    font-family: 'Myriad Pro';
+    font-family: $tertiary-font;
     font-size: 14px;
     letter-spacing: 3px;
     margin-bottom: 30px;
@@ -93,7 +93,7 @@
   box-shadow: inset 2px -15px 2px rgba(0, 0, 0, 0.1);
   color: $florence-light-blue;
   display: flex;
-  font-family: 'geomanist';
+  font-family: $main-font;
   height: 35px;
   margin: 55px auto;
   width: 40vw;
