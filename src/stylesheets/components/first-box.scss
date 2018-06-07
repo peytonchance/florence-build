@@ -5,7 +5,7 @@
 }
 
 .main-thought {
-  font-family: 'Merriweather';
+  font-family: $secondary-font;
   font-size: 1.7em;
   line-height: 1.5em;
 
@@ -27,7 +27,7 @@
 
 .quote-text {
   color: $florence-orange;
-  font-family: 'Merriweather';
+  font-family: $secondary-font;
 
   @media (max-width: $screen-sm) {
     text-align: left;
@@ -35,7 +35,7 @@
 }
 
 .attribution {
-  font-family: 'geomanist-medium';
+  font-family: $main-font-medium;
   font-size: 0.75em;
 
   @media (max-width: $screen-sm) {
