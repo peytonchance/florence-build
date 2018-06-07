@@ -1,2 +1,29 @@
+/*--------- Font Faces ------*/
+
+@font-face {
+    font-family: geomanist;
+    src: url(fonts/geomanist-regular-webfont.woff2);
+}
+
+@font-face {
+    font-family: geomanist-medium;
+    src: url(fonts/geomanist-medium-webfont.woff2);
+}
+
+/*-------- Colors ------*/
+
 $florence-blue: #184d66;
+$florence-light-blue: #d2e7e2;
 $florence-orange: #c06d3a;
+$florence-blue-green: #0e5254;
+$florence-red: #e95e67;
+
+
+
+/* ------ Breakpoints ----*/
+
+$screen-xs: 400px;
+$screen-sm: 768px;
+$screen-md: 1000px;
+$screen-lg: 1200px;
+$screen-xl: 1400px;
