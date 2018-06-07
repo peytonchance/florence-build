@@ -1,0 +1,85 @@
+/*---------- First box ---------*/
+
+.box-one {
+  position: relative;
+}
+
+.main-thought {
+  font-family: 'Merriweather';
+  font-size: 1.7em;
+  line-height: 1.5em;
+
+  @media (max-width: $screen-sm) {
+    font-size: 1.4em;
+  }
+}
+
+.quote {
+  margin-left: 38%;
+  text-align: center;
+  width: 60%;
+
+  @media (max-width: $screen-sm) {
+    width: 72%;
+    margin-left: 28%;
+  }
+}
+
+.quote-text {
+  color: $florence-orange;
+  font-family: 'Merriweather';
+
+  @media (max-width: $screen-sm) {
+    text-align: left;
+  }
+}
+
+.attribution {
+  font-family: 'geomanist-medium';
+  font-size: 0.75em;
+
+  @media (max-width: $screen-sm) {
+    text-align: left;
+  }
+}
+
+.pill-bottle {
+  bottom: 0;
+  position: absolute;
+  transform: translateX(-10%) translateY(45%);
+  width: 9em;
+  z-index: 3;
+
+  @media (max-width: $screen-sm) {
+    left: 0;
+    max-height: 200px;
+    transform: translateX(-45%) translateY(-18%);
+    width: 9em;
+  }
+}
+
+.pill-bottle2 {
+  bottom: 0;
+  position: absolute;
+  transform: translateX(80%) translateY(15%);
+  width: 6em;
+  z-index: 1;
+
+  @media (max-width: $screen-sm) {
+    left: 0;
+    transform: translateX(7%) translateY(-45%);
+    width: 6em;
+  }
+}
+
+.pill-bottle3 {
+  bottom: 0;
+  position: absolute;
+  width: 10em;
+  transform: translateX(-75%) translateY(20%);
+  z-index: 0;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
