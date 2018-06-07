@@ -62,6 +62,7 @@
 
   &:before {
     background-repeat: no-repeat;
+    background-size: 80px 80px;
     bottom: 0;
     content: '';
     display: block;
@@ -69,7 +70,7 @@
     margin: auto;
     position: absolute;
     top: 0;
-    width: 98px;
+    width: 100px;
   }
 
   &-left {
@@ -91,18 +92,19 @@
   }
 
   &.comprehension:before {
-    background-image: url('../icons/gears.png');
+    background-image: url('../images/gears.png');
+
   }
 
   &.denial:before {
-    background-image: url('../icons/heart.png');
+    background-image: url('../images/heart.png');
   }
 
   &.cost:before {
-    background-image: url('../icons/money.png');
+    background-image: url('../images/money.png');
   }
 
   &.complexity:before {
-    background-image: url('../icons/tally.png');
+    background-image: url('../images/tally.png');
   }
 }

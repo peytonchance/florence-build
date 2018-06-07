@@ -6,6 +6,7 @@ module.exports = {
   svgSprite   : true,
   ghPages     : true,
   stylesheets : true,
+  icons: true,
 
   javascripts: {
     entry: {
