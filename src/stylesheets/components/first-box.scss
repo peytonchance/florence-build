@@ -9,7 +9,7 @@
   font-size: 1.7em;
   line-height: 1.5em;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     font-size: 1.4em;
   }
 }
@@ -19,7 +19,7 @@
   text-align: center;
   width: 60%;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     width: 72%;
     margin-left: 28%;
   }
@@ -29,7 +29,7 @@
   color: $florence-orange;
   font-family: $secondary-font;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     text-align: left;
   }
 }
@@ -39,7 +39,7 @@
   font-size: 0.75em;
   font-style: normal;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     text-align: left;
   }
 }
@@ -51,7 +51,7 @@
   width: 9em;
   z-index: 3;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     left: 0;
     max-height: 200px;
     transform: translateX(-45%) translateY(-18%);
@@ -66,7 +66,7 @@
   width: 6em;
   z-index: 1;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     left: 0;
     transform: translateX(7%) translateY(-45%);
     width: 6em;
@@ -80,7 +80,7 @@
   transform: translateX(-75%) translateY(20%);
   z-index: 0;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     display: none;
   }
 }
