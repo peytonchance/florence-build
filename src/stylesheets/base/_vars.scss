@@ -27,8 +27,9 @@ $florence-gray: #504949;
 
 /*------ Breakpoints ----*/
 
-$screen-xs: 400px;
-$screen-sm: 768px;
-$screen-md: 1000px;
-$screen-lg: 1200px;
-$screen-xl: 1400px;
+$screen-xs: 'max-width: 400px';
+$screen-sm: 'max-width: 768px';
+$screen-sm-up: 'min-width: 768px';
+$screen-md: 'max-width: 1000px';
+$screen-lg: 'max-width: 1200px';
+$screen-xl: 'max-width: 1400px';
