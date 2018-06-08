@@ -10,10 +10,10 @@
     src: url(fonts/geomanist-medium-webfont.woff2);
 }
 
-$main-font: geomanist;
-$main-font-medium: geomanist-medium;
-$secondary-font: Merriweather;
-$tertiary-font: 'Myriad Pro';
+$main-font: geomanist, sans-serif;
+$main-font-medium: geomanist-medium, sans-serif;
+$secondary-font: Merriweather, serif;
+$tertiary-font: 'Myriad Pro', sans-serif;
 
 /*-------- Colors ------*/
 
