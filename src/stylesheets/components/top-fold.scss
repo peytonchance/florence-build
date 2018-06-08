@@ -4,130 +4,83 @@
   background: $florence-light-blue;
   overflow: hidden;
   padding-top: 50px;
+}
 
-  .title-box {
-    position: relative;
-  }
 
-  .title {
-    margin: auto;
-    max-width: 50vw;
+.title-box {
+  position: relative;
+}
 
-    @media ($screen-sm) {
-      margin-bottom: 30px;
-      max-width: 85vw;
-    }
-  }
+.title {
+  margin: auto;
+  max-width: 50vw;
 
-  .subtitle {
-    color: $florence-blue-green;
-    font-family: $tertiary-font;
-    font-size: 14px;
-    letter-spacing: 3px;
+  @media ($screen-sm) {
     margin-bottom: 30px;
-    text-align: center;
-    text-transform: uppercase;
-
-    @media ($screen-sm) {
-      margin-bottom: 15px;
-    }
-  }
-
-  .yellow-pill {
-    left: 22%;
-    position: absolute;
-    top: -30%;
-    transform: rotate(35deg);
-    width: 5em;
-
-    @media ($screen-sm) {
-      top: -55%;
-      left: 1%;
-      transform: rotate(40deg);
-    }
-  }
-
-  .pills {
-    left: 12%;
-    position: absolute;
-    top: 65%;
-    width: 8em;
-
-    @media ($screen-sm) {
-      display: none;
-    }
-  }
-
-  .more-pills {
-    position: absolute;
-    right: 12%;
-    top: -20%;
-    transform: rotate(10deg);
-    width: 15em;
-
-    @media ($screen-sm) {
-      right: -35%;
-      top: -40%;
-    }
-  }
-
-  .purple-pills {
-    position: absolute;
-    right: 10%;
-    width: 9em;
-
-    @media ($screen-sm) {
-      bottom: -30%;
-      right: -22%;
-      z-index: 4;
-    }
+    max-width: 85vw;
   }
 }
 
-/*----------- Pillbar styles ----------*/
+.subtitle {
+  color: $florence-blue-green;
+  font-family: $tertiary-font;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
 
-.pillbar {
-  background-image: linear-gradient(0deg, $florence-red 75%, $florence-blue 25%);
-  background-image: -webkit-linear-gradient(0deg, $florence-red 75%, $florence-blue 25%);
-  border-radius: 70px;
-  box-shadow: inset 2px -15px 2px rgba(0, 0, 0, 0.1);
-  color: $florence-light-blue;
-  display: flex;
-  font-family: $main-font;
-  height: 35px;
-  margin: 55px auto;
-  width: 40vw;
+  @media ($screen-sm) {
+    margin-bottom: 15px;
+  }
+}
+
+.yellow-pill {
+  left: 22%;
+  position: absolute;
+  top: -30%;
+  transform: rotate(35deg);
+  width: 5em;
+
+  @media ($screen-sm) {
+    top: -55%;
+    left: 1%;
+    transform: rotate(40deg);
+  }
+}
+
+.pills {
+  left: 12%;
+  position: absolute;
+  top: 65%;
+  width: 8em;
 
   @media ($screen-sm) {
     display: none;
   }
+}
 
-  a {
-    color: $florence-light-blue;
-    text-decoration: none;
-  }
+.more-pills {
+  position: absolute;
+  right: 12%;
+  top: -20%;
+  transform: rotate(10deg);
+  width: 15em;
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    font-size: 11px;
-    justify-content: space-around;
-    list-style: none;
-    margin: auto;
-    text-transform: uppercase;
-    width: 100%;
+  @media ($screen-sm) {
+    right: -35%;
+    top: -40%;
   }
 }
 
-.box {
-  background: $white;
-  border-radius: 4px;
-  margin: auto;
-  max-width: 65vw;
-  padding: 30px 63px;
+.purple-pills {
+  position: absolute;
+  right: 10%;
+  width: 9em;
 
   @media ($screen-sm) {
-    max-width: 100vw;
-    padding: 30px 25px 50px 25px;
+    bottom: -30%;
+    right: -22%;
+    z-index: 4;
   }
 }
