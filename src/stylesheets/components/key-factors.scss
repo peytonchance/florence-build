@@ -7,7 +7,7 @@
   color: $florence-gray;
   margin-top: 150px;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     margin-top: 100px;
   }
 
@@ -37,7 +37,7 @@
   text-align: center;
   width: 57vw;
 
-  @media (max-width: $screen-sm) {
+  @media ($screen-sm) {
     font-size: 1.4em;
     width: 85vw;
   }
