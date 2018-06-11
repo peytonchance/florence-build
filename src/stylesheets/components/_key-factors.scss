@@ -50,6 +50,10 @@
   width: 100%;
 
   @media ($screen-lg-up) {
+    background-size: 66vw;
+  }
+
+  @media ($screen-xl-up) {
     background-size: 50vw;
   }
 
