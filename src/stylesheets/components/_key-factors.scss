@@ -45,37 +45,43 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 70vw;
-  height: 600px;
-  margin-top: -55px;
+  height: 740px;
+  margin-top: -110px;
+  width: 100%;
+
+  @media ($screen-lg-up) {
+    background-size: 50vw;
+  }
 
   @media ($screen-sm) {
     background-image: url('../images/body-burst-mobile.png');
     background-position: top;
     background-size: 100vw;
-    height: initial;
-    margin-top: -160px;
+    margin-top: -190px;
+    min-height: 1400px;
   }
 
   @media ($screen-xs) {
-    margin-top: -140px;
+    margin-top: -165px;
   }
 }
 
 .factor-box {
   background-color: $white;
   border-radius: 9px;
-  font-size: 0.7em;
+  font-size: 0.8em;
   line-height: 1.4em;
   overflow-x: visible;
   padding: 25px;
   position: relative;
-  width: 200px;
+  width: 210px;
 
   @media ($screen-sm) {
     font-size: 0.9em;
     left: 0;
     line-height: 1.6em;
     margin: 40px auto;
+    text-align: center;
     top: 0;
     width: 70vw;
 
@@ -91,53 +97,62 @@
     bottom: 0;
     content: '';
     display: block;
-    height: 88px;
+    height: 65px;
     margin: auto;
     position: absolute;
     top: 20px;
-    width: 88px;
+    width: 65px;
   }
 
   &-left {
     border-radius: 156px 999px 999px 156px;
+    padding-right: 40px;
     right: -56%;
     top: 11%;
 
     &:before {
-      right: -60px;
+      right: -50px;
       
       @media ($screen-sm) {
         background-size: 60px 60px;
-        left: 34vw;
-        top: -80%;
+        left: -8vw;
+        top: -95%;
+      }
+
+      @media ($screen-xs) {
+        left: -13vw;
       }
     }
 
     @media ($screen-sm) {
       border-radius: 4px 4px 4px 4px;
+      padding-right: 20px;
     }
   }
 
   &-right {
     border-radius: 999px 156px 156px 999px;
     left: 0;
+    padding-left: 40px;
 
     &::before {
-      left: -45px;
+      left: -50px;
 
       @media ($screen-sm) {
+        background-position: center;
         background-size: 60px 60px;
-        right: 23vw;
-        top: -80%;
+        left: 34vw;
+        top: -100%;
       }
 
       @media ($screen-xs) {
-        right: 21vw;
+        left: 32vw;
       }
     }
 
     @media ($screen-sm) {
       border-radius: 4px 4px 4px 4px;
+      padding-left: 20px;
     }
   }
 
@@ -148,14 +163,26 @@
     &:before {
       background-image: url('../images/gears.png');
     }
+    
+    @media ($screen-lg-up) {
+      left: 54vw;
+    }
+
+    @media ($screen-md) {
+      top: 20%;
+    }
 
     @media ($screen-sm) {
       left: 0;
-      top: 450px;
+      top: 700px;
     }
 
     @media ($screen-xs) {
-      top: 400px;
+      top: 420px;
+    }
+
+    @media ($screen-lg-up) and ($screen-xl) {
+      top: 20%;
     }
   }
 
@@ -167,13 +194,26 @@
       background-image: url('../images/heart.png');
     }
 
+    @media ($screen-sm-up) and ($screen-md) {
+      left: 17vw;
+    }
+
+    @media ($screen-lg-up) and ($screen-xl) {
+      left: 26vw;
+    }
+
+    @media ($screen-xl-up) {
+      left: 33vw;
+    }
+
+
     @media ($screen-sm) {
       left: 0;
-      top: 450px;
+      top: 700px;
     }
 
     @media ($screen-xs) {
-      top: 400px;
+      top: 420px;
     }
   }
 
@@ -184,34 +224,63 @@
     &:before {
       background-image: url('../images/money.png');
     }
+  
+    @media ($screen-lg-up) {
+      left: 54vw;
+    }
+
+    @media ($screen-sm) {
+      left: 0;
+      top: 700px;
+    }
+
+    @media ($screen-xs) {
+      top: 420px;
+    }
   }
 
   &.complexity {
-    left: 15%;
+    left: 14vw;
     top: -3%;
 
     &:before {
       background-image: url('../images/tally.png');
     }
 
+    @media ($screen-md) {
+      left: 4vw;
+      top: -4%;
+    }
+
     @media ($screen-sm) {
       left: 0;
+      top: 700px;
+    }
+
+    @media ($screen-xs) {
+      top: 420px;
+    }
+
+    @media ($screen-lg-up) {
+      left: 27vw;
+    }
+
+    @media ($screen-lg-up) and ($screen-xl) {
+      left: 19vw;
     }
   }
+  
+  
 
   @media ($screen-sm) {
-    top: 450px;
-  }
-
-  @media ($screen-xs) {
-    top: 400px;
+    top: 490px;
   }
 }
 
 .factor-icon {
   height: 40px;
-  width: 40px;
   position: absolute;
+  width: 40px;
 
   &-toggle {
 
