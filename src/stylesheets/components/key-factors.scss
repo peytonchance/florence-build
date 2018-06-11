@@ -5,7 +5,7 @@
   margin-top: 150px;
 
   @media ($screen-sm) {
-    margin-top: 100px;
+    margin-top: 65px;
   }
 
   h3 {
@@ -41,9 +41,24 @@
 }
 
 .factor-bg {
-  background-image: url('../images/body.svg');
+  background-image: url('../images/body-burst.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 70vw;
+  height: 600px;
+  margin-top: -55px;
+
+  @media ($screen-sm) {
+    background-image: url('../images/body-burst-mobile.png');
+    background-position: top;
+    background-size: 100vw;
+    height: initial;
+    margin-top: -160px;
+  }
+
+  @media ($screen-xs) {
+    margin-top: -140px;
+  }
 }
 
 .factor-box {
@@ -54,53 +69,158 @@
   overflow-x: visible;
   padding: 25px;
   position: relative;
-  width: 250px;
+  width: 200px;
+
+  @media ($screen-sm) {
+    font-size: 0.9em;
+    left: 0;
+    line-height: 1.6em;
+    margin: 40px auto;
+    top: 0;
+    width: 70vw;
+
+    & h3 {
+      letter-spacing: 1px;
+    }
+  }
 
 
   &::before {
     background-repeat: no-repeat;
-    background-size: 80px 80px;
+    background-size: 65px 65px;
     bottom: 0;
     content: '';
     display: block;
-    height: 100px;
+    height: 88px;
     margin: auto;
     position: absolute;
-    top: 0;
-    width: 100px;
+    top: 20px;
+    width: 88px;
   }
 
   &-left {
-    border-radius: 999px 8px 8px 999px;
-    right: 0;
+    border-radius: 156px 999px 999px 156px;
+    right: -56%;
+    top: 11%;
 
-    &::before {
-      left: -80px;
+    &:before {
+      right: -60px;
+      
+      @media ($screen-sm) {
+        background-size: 60px 60px;
+        left: 34vw;
+        top: -80%;
+      }
+    }
+
+    @media ($screen-sm) {
+      border-radius: 4px 4px 4px 4px;
     }
   }
 
   &-right {
-    border-radius: 8px 999px 999px 8px;
+    border-radius: 999px 156px 156px 999px;
     left: 0;
 
     &::before {
-      right: -70px;
+      left: -45px;
+
+      @media ($screen-sm) {
+        background-size: 60px 60px;
+        right: 23vw;
+        top: -80%;
+      }
+
+      @media ($screen-xs) {
+        right: 21vw;
+      }
+    }
+
+    @media ($screen-sm) {
+      border-radius: 4px 4px 4px 4px;
     }
   }
 
-  &.comprehension::before {
-    background-image: url('../images/gears.png');
+  &.comprehension {
+    left: 56%;
+    top: 18%;
+
+    &:before {
+      background-image: url('../images/gears.png');
+    }
+
+    @media ($screen-sm) {
+      left: 0;
+      top: 450px;
+    }
+
+    @media ($screen-xs) {
+      top: 400px;
+    }
   }
 
-  &.denial::before {
-    background-image: url('../images/heart.png');
+  &.denial {
+    left: 25%;
+    top: 14%;
+
+    &:before {
+      background-image: url('../images/heart.png');
+    }
+
+    @media ($screen-sm) {
+      left: 0;
+      top: 450px;
+    }
+
+    @media ($screen-xs) {
+      top: 400px;
+    }
   }
 
-  &.cost::before {
-    background-image: url('../images/money.png');
+  &.cost {
+    left: 57%;
+    top: 10%;
+    
+    &:before {
+      background-image: url('../images/money.png');
+    }
   }
 
-  &.complexity::before {
-    background-image: url('../images/tally.png');
+  &.complexity {
+    left: 15%;
+    top: -3%;
+
+    &:before {
+      background-image: url('../images/tally.png');
+    }
+
+    @media ($screen-sm) {
+      left: 0;
+    }
+  }
+
+  @media ($screen-sm) {
+    top: 450px;
+  }
+
+  @media ($screen-xs) {
+    top: 400px;
+  }
+}
+
+.factor-icon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+
+  &-toggle {
+
+    @media ($screen-sm) {
+      display: none;
+    }
+  }
+
+  &-comprehension {
+    top: 100%;
   }
 }
