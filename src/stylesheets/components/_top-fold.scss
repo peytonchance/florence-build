@@ -42,7 +42,12 @@
   transform: rotate(35deg);
   width: 5em;
 
-  @media ($screen-sm) {
+  @media ($screen-xs-up) and ($screen-sm) {
+    left: 13%;
+    top: -35%;
+  }
+
+  @media ($screen-xs) {
     top: -55%;
     left: 1%;
     transform: rotate(40deg);
@@ -66,8 +71,13 @@
   top: -20%;
   transform: rotate(10deg);
   width: 15em;
+  
+  @media ($screen-xs-up) and ($screen-sm) {
+    right: -20%;
+    top: -30%;
+  }
 
-  @media ($screen-sm) {
+  @media ($screen-xs) {
     right: -35%;
     top: -40%;
   }
