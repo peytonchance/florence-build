@@ -57,6 +57,10 @@
     transform: translateX(-45%) translateY(-18%);
     width: 9em;
   }
+
+  @media ($screen-xs-up) and ($screen-sm) {
+    transform: translateX(-45%) translateY(-2%);
+  }
 }
 
 .pill-bottle2 {
@@ -70,6 +74,10 @@
     left: 0;
     transform: translateX(7%) translateY(-45%);
     width: 6em;
+  }
+
+  @media ($screen-xs-up) and ($screen-sm) {
+    transform: translateX(20%) translateY(-20%);
   }
 }
 

@@ -44,18 +44,10 @@
   background-image: url('../images/body-burst.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 70vw;
+  background-size: 1000px auto;
   height: 740px;
   margin-top: -110px;
   width: 100%;
-
-  @media ($screen-lg-up) {
-    background-size: 66vw;
-  }
-
-  @media ($screen-xl-up) {
-    background-size: 50vw;
-  }
 
   @media ($screen-sm) {
     background-image: url('../images/body-burst-mobile.png');
@@ -186,7 +178,7 @@
     }
 
     @media ($screen-lg-up) and ($screen-xl) {
-      top: 20%;
+      top: 14%;
     }
   }
 
@@ -207,7 +199,7 @@
     }
 
     @media ($screen-xl-up) {
-      left: 33vw;
+      left: 32vw;
     }
 
 
