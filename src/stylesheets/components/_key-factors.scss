@@ -11,7 +11,7 @@
   h3 {
     color: $florence-orange;
     font-size: 1em;
-    margin-bottom: -8px;
+    margin-bottom: -0.3em;
     text-transform: uppercase;
   }
 }
@@ -41,23 +41,19 @@
 }
 
 .factor-bg {
-  background-image: url('../images/body-burst.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1000px auto;
+  background: url('../images/body-burst.png') no-repeat center, 1000px;
   height: 740px;
   margin-top: -110px;
   width: 100%;
 
   @media ($screen-sm) {
-    background-image: url('../images/body-burst-mobile.png');
-    background-position: top;
-    background-size: 100vw;
+    background: url('../images/body-burst-mobile.png') no-repeat top, 100vw ;
     margin-top: -190px;
     min-height: 1400px;
   }
 
   @media ($screen-xs) {
+    background-size: 100vw;
     margin-top: -165px;
   }
 }
@@ -81,7 +77,7 @@
     top: 0;
     width: 70vw;
 
-    & h3 {
+    h3 {
       letter-spacing: 1px;
     }
   }
@@ -121,7 +117,7 @@
     }
 
     @media ($screen-sm) {
-      border-radius: 4px 4px 4px 4px;
+      border-radius: 4px;
       padding-right: 20px;
     }
   }
@@ -147,7 +143,7 @@
     }
 
     @media ($screen-sm) {
-      border-radius: 4px 4px 4px 4px;
+      border-radius: 4px;
       padding-left: 20px;
     }
   }
