@@ -18,7 +18,7 @@
 
 .section-title {
   color: $florence-blue;
-  font-size: 0.65em;
+  font-size: 0.8em;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -35,8 +35,8 @@
   width: 85vw;
 
   @media ($screen-sm-up) {
-    font-size: 1.7em;
-    width: 57vw;
+    font-size: 1.5em;
+    width: 60%;
   }
 }
 

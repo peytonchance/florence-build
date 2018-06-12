@@ -1,9 +1,9 @@
 /*-------- Top Fold styles ---------*/
 
-.top-fold {
+main {
   background: $florence-light-blue;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: visible;
   padding-top: 50px;
   width: 100vw;
 }
