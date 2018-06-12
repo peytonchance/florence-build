@@ -6,31 +6,32 @@
 
 .main-thought {
   font-family: $secondary-font;
-  font-size: 1.7em;
+  font-size: 1.4em;
   line-height: 1.5em;
 
-  @media ($screen-sm) {
-    font-size: 1.4em;
+  @media ($screen-sm-up) {
+    font-size: 1.7em;
   }
 }
 
 .quote {
-  margin-left: 38%;
+  margin-left: 28%;
   text-align: center;
-  width: 60%;
+  width: 72%;
 
-  @media ($screen-sm) {
-    width: 72%;
-    margin-left: 28%;
+  @media ($screen-sm-up) {
+    margin-left: 38%;
+    width: 60%;
   }
 }
 
 .quote-text {
   color: $florence-orange;
   font-family: $secondary-font;
-
-  @media ($screen-sm) {
-    text-align: left;
+  text-align: left;
+  
+  @media ($screen-sm-up) {
+    text-align: center;
   }
 }
 
@@ -38,57 +39,57 @@
   font-family: $main-font-medium;
   font-size: 0.75em;
   font-style: normal;
+  text-align: left;
 
-  @media ($screen-sm) {
-    text-align: left;
+  @media ($screen-sm-up) {
+    text-align: center;
   }
 }
 
 .pill-bottle {
   bottom: 0;
+  left: 0;
+  max-height: 200px;
   position: absolute;
-  transform: translate(-10%, 45%);
+  transform: translate(-45%, -18%);
   width: 9em;
   z-index: 3;
 
-  @media ($screen-sm) {
-    left: 0;
-    max-height: 200px;
-    transform: translate(-45%, -18%);
-    width: 9em;
+  @media ($screen-xs-up) {
+    transform: translate(-45%, -2%);
   }
 
-  @media ($screen-xs-up) and ($screen-sm) {
-    transform: translate(-45%, -2%);
+  @media ($screen-sm-up) {
+    transform: translate(35%, 43%);
   }
 }
 
 .pill-bottle2 {
   bottom: 0;
+  left: 0;
   position: absolute;
-  transform: translate(80%, 15%);
+  transform: translate(7%, -45%);
   width: 6em;
   z-index: 1;
 
-  @media ($screen-sm) {
-    left: 0;
-    transform: translate(7%, -45%);
-    width: 6em;
+  @media ($screen-xs-up) {
+    transform: translate(20%, -20%);
   }
 
-  @media ($screen-xs-up) and ($screen-sm) {
-    transform: translate(20%, -20%);
+  @media ($screen-sm-up) {  
+    transform: translate(135%, 15%);
   }
 }
 
 .pill-bottle3 {
+  display: none;
   bottom: 0;
   position: absolute;
   width: 10em;
   transform: translate(-75%, 20%);
   z-index: 0;
 
-  @media ($screen-sm) {
-    display: none;
+  @media ($screen-sm-up) {
+    display: block;
   }
 }
