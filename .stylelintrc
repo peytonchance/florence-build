@@ -8,6 +8,7 @@
     "declaration-colon-space-after": "always",
     "block-opening-brace-space-before": "always",
     "max-empty-lines": 2,
+    "indentation": 2,
     "rule-empty-line-before": [ "always", {
       "ignore": ["after-comment"]
     } ]

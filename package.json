@@ -7,6 +7,8 @@
   "author": "Peyton Chance",
   "license": "MIT",
   "dependencies": {
-    "blendid": "^4.4.3"
+    "blendid": "^4.4.3",
+    "postcss": "^6.0.22",
+    "stylelint": "^9.2.1"
   }
 }

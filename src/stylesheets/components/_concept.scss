@@ -8,21 +8,21 @@
   padding-top: 130px;
   position: relative;
   width: 100%;
-  
+
   .section-title {
-  	color: $white;
-  	margin-bottom:-10px;
+    color: $white;
+    margin-bottom: -10px;
   }
 
   .section-intro {
-  	color: $white;
-  	font-size: 2.5em;
+    color: $white;
+    font-size: 2.5em;
   }
 
   p {
-    margin: 10px auto 30px auto;
+    margin: 10px auto 30px;
     width: 85%;
-    
+
     @media ($screen-sm-up) {
       width: 60%;
     }
@@ -30,8 +30,8 @@
 }
 
 .florence {
- margin-left: 18px;
- position: absolute;
- width: 250px;
- top: -150px;
+  margin-left: 18px;
+  position: absolute;
+  width: 250px;
+  top: -150px;
 }
