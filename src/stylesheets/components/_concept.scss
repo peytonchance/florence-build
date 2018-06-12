@@ -27,6 +27,10 @@
       width: 60%;
     }
   }
+
+  .box {
+    color: $florence-gray;
+  }
 }
 
 .florence {
@@ -34,4 +38,74 @@
   position: absolute;
   width: 250px;
   top: -150px;
+}
+
+/*-------- Demo Styles -------*/
+
+.demo {
+  margin-top: 100px;
+
+  h3 {
+    color: $florence-med-blue;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: $secondary-font;
+    line-height: 1.9em;
+    width: 100%;
+  }
+
+}
+
+.explain {
+  padding: auto 10%;
+
+  @media ($screen-sm-up) {
+    width: 40%;
+  }
+}
+
+.messages {
+
+  @media ($screen-sm-up) {
+    width: 50%;
+  }
+}
+
+.illo {
+  margin-left: 10px;
+  position: absolute;
+  top: 585px;
+  width: 120px;
+}
+
+.messages {
+
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    list-style: none;
+  }
+
+  li {
+    border-radius: 10px;
+    line-height: 1.3em;
+    margin-top: 5px;
+    padding: 12px 11px 12px;
+  }
+
+  &-left {
+    background-color: $florence-light-gray;
+    justify-self: flex-start;
+    text-align: left;
+    width: 80%;
+  }
+
+  &-right {
+    background-color: $florence-med-blue;
+    color: $white;
+    width: 20%;
+    text-align: center;
+  }
 }
