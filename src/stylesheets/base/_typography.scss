@@ -3,8 +3,9 @@ body {
   font-family: $main-font;
   font-size: 15px;
   line-height: 1.6em;
+  text-align: center;
 
-  @media (max-width: 600px) {
-    text-align: center;
+  @media ($screen-sm-up) {
+    text-align: left;
   }
 }

@@ -2,10 +2,10 @@
 
 .key-factors {
   color: $florence-gray;
-  margin-top: 150px;
+  margin-top: 65px;
 
-  @media ($screen-sm) {
-    margin-top: 65px;
+  @media ($screen-sm-up) {
+    margin-top: 130px;
   }
 
   h3 {
@@ -28,58 +28,64 @@
 .section-intro {
   color: $florence-blue;
   font-family: $secondary-font;
-  font-size: 1.7em;
+  font-size: 1.4em;
   line-height: 1.6em;
   margin: auto;
   text-align: center;
-  width: 57vw;
+  width: 85vw;
 
-  @media ($screen-sm) {
-    font-size: 1.4em;
-    width: 85vw;
+  @media ($screen-sm-up) {
+    font-size: 1.7em;
+    width: 57vw;
   }
 }
 
 .factor-bg {
-  background: url('../images/body-burst.png') no-repeat center, 1000px;
-  height: 740px;
-  margin-top: -110px;
-  width: 100%;
+  background: url('../images/body-burst-mobile.png') no-repeat top;
+  background-size: 100vw;
+  margin-top: -150px;
 
-  @media ($screen-sm) {
-    background: url('../images/body-burst-mobile.png') no-repeat top, 100vw ;
-    margin-top: -190px;
-    min-height: 1400px;
+  @media ($screen-xs-up) {
+    background-size: 57vw;
   }
 
-  @media ($screen-xs) {
-    background-size: 100vw;
-    margin-top: -165px;
+  @media ($screen-sm-up) {
+    background: url('../images/body-burst.png') no-repeat center, 1000px;
+    margin-top: -100px;
+    width: 100%;
+  }
+
+  @media ($screen-lg-up) {
+    background-size: 900px;
+  }
+
+  @media ($screen-xxl-up) {
+    margin-top: 0px;
   }
 }
 
 .factor-box {
   background-color: $white;
   border-radius: 9px;
-  font-size: 0.8em;
-  line-height: 1.4em;
+  font-size: 0.9em;
+  left: 0;
+  line-height: 1.6em;
+  margin: 40px auto;
   overflow-x: visible;
   padding: 25px;
   position: relative;
-  width: 210px;
+  text-align: center;
+  top: 0;
+  width: 70vw;
+  
+  h3 {
+    letter-spacing: 1px;
+  }
 
-  @media ($screen-sm) {
-    font-size: 0.9em;
-    left: 0;
-    line-height: 1.6em;
-    margin: 40px auto;
-    text-align: center;
-    top: 0;
-    width: 70vw;
-
-    h3 {
-      letter-spacing: 1px;
-    }
+  @media ($screen-sm-up) {
+    font-size: 0.8em;
+    line-height: 1.4em;
+    width: 210px;
   }
 
 
@@ -92,180 +98,134 @@
     height: 65px;
     margin: auto;
     position: absolute;
-    top: 20px;
+    top: -100%;
     width: 65px;
+    
+    @media ($screen-sm-up) {
+      background-size: 80px 80px;
+      height: 80px;
+      width: 80px;
+    }      
   }
 
   &-left {
-    border-radius: 156px 999px 999px 156px;
-    padding-right: 40px;
-    right: -56%;
-    top: 11%;
+    border-radius: 4px;
+    padding-right: 20px;
+    
 
-    &:before {
-      right: -50px;
-      
-      @media ($screen-sm) {
-        background-size: 60px 60px;
-        left: -8vw;
-        top: -95%;
-      }
-
-      @media ($screen-xs) {
-        left: -13vw;
-      }
+    @media ($screen-sm-up) {
+      border-radius: 156px 999px 999px 156px;
+      padding-right: 40px;
     }
 
-    @media ($screen-sm) {
-      border-radius: 4px;
-      padding-right: 20px;
+    &::before {
+      background-size: 60px 60px;
+      left: 41%;
+      top: -95%;
+      
+      @media ($screen-sm-up) {
+        background-size: 80px 80px;
+        right: -200px;
+        top: 0;
+      }      
     }
   }
 
   &-right {
-    border-radius: 999px 156px 156px 999px;
+    background-position: center;
+    background-size: 60px 60px;
+    border-radius: 4px;
     left: 0;
-    padding-left: 40px;
-
-    &::before {
-      left: -50px;
-
-      @media ($screen-sm) {
-        background-position: center;
-        background-size: 60px 60px;
-        left: 34vw;
-        top: -100%;
-      }
-
-      @media ($screen-xs) {
-        left: 32vw;
-      }
+    padding-left: 20px;
+    top: -100%;
+    
+    @media ($screen-sm-up) {
+      border-radius: 999px 156px 156px 999px;
+      padding-left: 40px;
     }
 
-    @media ($screen-sm) {
-      border-radius: 4px;
-      padding-left: 20px;
+    &::before {
+      background-size: 60px 60px;
+      left: 41%;
+      
+      @media ($screen-xs-up) {
+        left: 34vw;
+      }
+
+      @media ($screen-sm-up) {
+        background-size: 80px 80px;
+        left: -23%;
+        top: 0;
+      }
     }
   }
 
   &.comprehension {
-    left: 56%;
-    top: 18%;
+    top: 440px;
 
-    &:before {
+    &::before {
       background-image: url('../images/gears.png');
     }
     
-    @media ($screen-lg-up) {
-      left: 54vw;
-    }
-
-    @media ($screen-lg-up) and ($screen-xl) {
-      top: 14%;
-    }
-
-    @media ($screen-md) {
-      top: 20%;
-    }
-
-    @media ($screen-sm) {
+    @media ($screen-xs-up) {
       left: 0;
-      top: 700px;
     }
 
-    @media ($screen-xs) {
-      top: 420px;
+    @media ($screen-sm-up) {
+      top: 80px;
+      left: 220px;
     }
   }
 
   &.denial {
-    left: 25%;
-    top: 14%;
+    top: 440px;
 
-    &:before {
+    &::before {
       background-image: url('../images/heart.png');
     }
-
-    @media ($screen-sm-up) and ($screen-md) {
-      left: 17vw;
-    }
-
-    @media ($screen-lg-up) and ($screen-xl) {
-      left: 26vw;
-    }
-
-    @media ($screen-xl-up) {
-      left: 32vw;
-    }
-
-
-    @media ($screen-sm) {
+    
+    @media ($screen-xs-up) {
       left: 0;
-      top: 700px;
     }
 
-    @media ($screen-xs) {
-      top: 420px;
+    @media ($screen-sm-up) {
+      left: -150px;
+      top: 40px;
     }
   }
 
   &.cost {
-    left: 57%;
-    top: 10%;
+    top: 440px;
+
+    &::before {
+      background-image: url('../images/heart.png');
+    }
     
-    &:before {
-      background-image: url('../images/money.png');
-    }
-  
-    @media ($screen-lg-up) {
-      left: 54vw;
-    }
-
-    @media ($screen-sm) {
+    @media ($screen-xs-up) {
       left: 0;
-      top: 700px;
     }
 
-    @media ($screen-xs) {
-      top: 420px;
+    @media ($screen-sm-up) {
+      left: 230px;
+      top: 30px;
     }
   }
 
   &.complexity {
-    left: 14vw;
-    top: -3%;
+    top: 440px;
 
-    &:before {
+    &::before {
       background-image: url('../images/tally.png');
     }
-
-    @media ($screen-md) {
-      left: 4vw;
-      top: -4%;
-    }
-
-    @media ($screen-sm) {
+    
+    @media ($screen-xs-up) {
       left: 0;
-      top: 700px;
     }
 
-    @media ($screen-xs) {
-      top: 420px;
+    @media ($screen-sm-up) {
+      left: -270px;
+      top: -150px;
     }
-
-    @media ($screen-lg-up) {
-      left: 27vw;
-    }
-
-    @media ($screen-lg-up) and ($screen-xl) {
-      left: 19vw;
-    }
-  }
-  
-  
-
-  @media ($screen-sm) {
-    top: 490px;
   }
 }
 
@@ -275,9 +235,10 @@
   width: 40px;
 
   &-toggle {
-
-    @media ($screen-sm) {
-      display: none;
+    display: none;
+    
+    @media ($screen-sm-up) {
+      display: block;
     }
   }
 
