@@ -17,12 +17,12 @@ sup {
 
 .box {
   background: $white;
-  border-radius: 4px;
   margin: auto;
   max-width: 100vw;
   padding: 30px 25px 50px 25px;
-  
+
   @media ($screen-sm-up) {
+    border-radius: 4px;
     max-width: 65vw;
     padding: 30px 63px;
   }
