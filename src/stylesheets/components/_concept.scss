@@ -139,60 +139,6 @@
 
 }
 
-.message {
-
-  &-left {
-    background-color: $florence-light-gray;
-    justify-self: flex-start;
-    margin-left: 12%;
-    text-align: left;
-    width: 70%;
-  }
-
-  &-right {
-    background-color: $florence-med-blue;
-    color: $white;
-    margin-left: 75%;
-    position: relative;
-    text-align: center;
-    width: 14%;
-
-    &::before {
-      border: 14px solid transparent;
-      border-bottom: 0;
-      border-left: 0;
-      border-radius: 0 0 15px 15px;
-      border-right-color: $white;
-      bottom: -2px;
-      content: '';
-      height: 0;
-      margin-right: -27px;
-      margin-top: -13px;
-      position: absolute;
-      right: 14px;
-      transform: rotate(15deg);
-      width: 0;
-      z-index: 1;
-    }
-
-    &::after {
-      border: 14px solid transparent;
-      border-bottom: 0;
-      border-left-color: $florence-med-blue;
-      border-right: 0;
-      bottom: 0;
-      content: '';
-      height: 0;
-      margin-right: -27px;
-      margin-top: -13px;
-      position: absolute;
-      right: 23px;
-      transform: rotate(10deg);
-      width: 0;
-    }
-  }
-}
-
 .messages {
   width: 100%;
 
@@ -213,10 +159,66 @@
   }
 
   li {
-    border-radius: 10px;
+    border-radius: 13px;
     line-height: 1.3em;
     margin-top: 5px;
     padding: 10px 10px 8px;
+  }
+}
+
+.message {
+
+  &-left {
+    background-color: $florence-light-gray;
+    justify-self: flex-start;
+    margin-left: 12%;
+    text-align: left;
+    width: 70%;
+  }
+
+  &-right {
+    align-self: flex-end;
+    background-color: $florence-med-blue;
+    color: $white;
+    margin-left: 75%;
+    max-width: 14%;
+    min-width: 8%;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      border: 14px solid transparent;
+      border-bottom: 0;
+      border-left: 0;
+      border-radius: 0 0 0 9px;
+      border-right-color: $white;
+      bottom: 0px;
+      content: '';
+      height: 0;
+      margin-right: -27px;
+      margin-top: -14px;
+      position: absolute;
+      right: 16px;
+      transform: rotate(35deg);
+      width: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      border: 14px solid transparent;
+      border-bottom: 0;
+      border-left-color: $florence-med-blue;
+      border-right: 0;
+      bottom: 0;
+      content: '';
+      height: 0;
+      margin-right: -27px;
+      margin-top: -14px;
+      position: absolute;
+      right: 23px;
+      transform: rotate(10deg);
+      width: 0;
+    }
   }
 }
 
