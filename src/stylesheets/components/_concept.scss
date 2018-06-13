@@ -177,12 +177,30 @@
     text-align: center;
     width: 14%;
 
+    &::before {
+      border: 14px solid transparent;
+      border-bottom: 0;
+      border-left: 0;
+      border-radius: 0 0 15px 15px;
+      border-right-color: $white;
+      bottom: -2px;
+      content: '';
+      height: 0;
+      right: 14px;
+      margin-right: -27px;
+      margin-top: -13.5px;
+      position: absolute;
+      transform: rotate(15deg);
+      width: 0;
+      z-index: 1;
+    }
+
     &::after {
       border: 14px solid transparent;
-      bottom: 0;
       border-bottom: 0;
       border-left-color: $florence-med-blue;
       border-right: 0;
+      bottom: 0;
       content: '';
       height: 0;
       margin-right: -27px;
@@ -197,8 +215,9 @@
 
 .recent {
   position: relative;
+  z-index: 4;
 
-  &::before {
+  & span::before {
     background: url('../images/florence-avatar.svg') -3px -1px, $florence-yellow no-repeat;
     background-size: 45px 45px;
     border-radius: 999px;
@@ -208,12 +227,32 @@
     left: -50px;
     position: absolute;
     width: 40px;
+    z-index: 1;
+  }
+
+  &::before {
+    border: 14px solid transparent;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0 0 7px;
+    border-right-color: $white;
+    bottom: 0;
+    content: '';
+    height: 0;
+    left: -13px;
+    margin-right: -27px;
+    margin-top: -13.5px;
+    position: absolute;
+    transform: rotate(-10deg);
+    width: 0;
+    z-index: 1;
   }
 
   &::after {
     border: 14px solid transparent;
     border-bottom: 0;
     border-left: 0;
+    border-radius: 0 0 7px;
     border-right-color: $florence-light-gray;
     bottom: 0;
     content: '';
@@ -222,7 +261,7 @@
     margin-right: -27px;
     margin-top: -13.5px;
     position: absolute;
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
     width: 0;
   }
 }
