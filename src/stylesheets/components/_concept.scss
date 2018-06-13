@@ -135,7 +135,7 @@
 
 }
 
-.messages {
+.message {
   width: 100%;
 
   @media ($screen-sm-up) {
@@ -186,10 +186,10 @@
       bottom: -2px;
       content: '';
       height: 0;
-      right: 14px;
       margin-right: -27px;
       margin-top: -13.5px;
       position: absolute;
+      right: 14px;
       transform: rotate(15deg);
       width: 0;
       z-index: 1;
