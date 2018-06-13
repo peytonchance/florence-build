@@ -1,3 +1,66 @@
 footer {
+  background-color: $florence-blue;
+  color: $florence-light-blue;
+  min-height: 500px;
+  overflow: hidden;
+  padding-top: 50px;
+  position: relative;
+  text-align: center;
 
+  @media ($screen-sm-up) {
+    max-height: 310px;
+    min-height: 300px;
+    padding: 60px 60px;
+  }
+
+  h2{
+    font-size: 0.93em;
+    letter-spacing: 2px;
+    margin-bottom: -5px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: $secondary-font;
+    margin: auto;
+    width: 80%;
+
+    @media ($screen-md-up) {
+      width: 50%;
+    }
+  }
+}
+
+.logo {
+  width: 175px;
+}
+
+.contact {
+  background-color: $florence-blue;
+  border: solid 3px $florence-yellow;
+  border-radius: 50px;
+  color: $florence-yellow;
+  font-family: $main-font;
+  font-size: 1.1em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 30px auto;
+  text-transform: uppercase;
+  width: 250px;
+}
+
+.footer-florence {
+  left: 25%;
+  margin-top: 90px;
+  position: absolute;
+  width: 230px;
+
+  @media ($screen-sm-up) {
+    left: 10%;
+    margin-top: 50px;
+  }
+
+  @media ($screen-lg-up) {
+    margin-top: 80px;
+  }
 }

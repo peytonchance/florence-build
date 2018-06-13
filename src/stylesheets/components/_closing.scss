@@ -1,19 +1,24 @@
 .closing {
   color: $florence-blue;
-  margin: auto;
+  margin: 0px auto 50px;
   position: relative;
   width: 80%;
 
   @media ($screen-md-up) {
+    margin-bottom: 150px;
     width: 50%;
-  }
-
-  .section-intro {
-    font-size: 2em;
   }
 
   p:last-of-type {
-    width: 50%;
+
+    @media ($screen-md-up) {
+      width: 50%;
+    }
+  }
+
+  .section-intro {
+    font-size: 3em;
+    width: initial;
   }
 }
 
@@ -26,6 +31,18 @@
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(-100px, 230px);
+    transform: translate(-100px, 250px);
+  }
+}
+
+.logo-with-title {
+  margin: auto;
+
+  @media ($screen-md-up) {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 350px;
   }
 }
