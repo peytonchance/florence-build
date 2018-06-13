@@ -24,30 +24,50 @@
     width: 85%;
 
     @media ($screen-sm-up) {
-      width: 60%;
+      width: 65%;
     }
   }
 
   .box {
     color: $florence-gray;
+    padding-top: 0;
+
+    @media ($screen-md-up) {
+      padding: 4%;
+      max-width: 60%;
+    }
   }
 }
 
 .florence {
   margin-left: 18px;
   position: absolute;
-  width: 250px;
   top: -150px;
+  width: 250px;
 }
 
 /*-------- Demo Styles -------*/
 
 .demo {
-  margin-top: 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 70px 0;
+  position: relative;
+
+  @media ($screen-md-up) {
+    flex-flow: row nowrap;
+    margin-top: 50px;
+  }
 
   h3 {
     color: $florence-med-blue;
+    text-align: center;
     text-transform: uppercase;
+
+    @media ($screen-md-up) {
+      text-align: left;
+    }
   }
 
   p {
@@ -56,13 +76,22 @@
     width: 100%;
   }
 
+  &-two {
+
+    @media ($screen-md-up) {
+      overflow: hidden;
+    }
+
+  }
 }
 
 .explain {
-  padding: auto 10%;
+  background-color: $white;
+  padding: 30px 4% 0;
+  z-index: 1;
 
-  @media ($screen-sm-up) {
-    width: 40%;
+  @media ($screen-md-up) {
+    width: 50%;
   }
 }
 
@@ -74,17 +103,53 @@
 }
 
 .illo {
-  margin-left: 10px;
+  align-self: center;
   position: absolute;
-  top: 585px;
-  width: 120px;
+
+  &.cup {
+    top: -85px;
+    width: 120px;
+    z-index: 2;
+
+    @media ($screen-md-up) {
+      bottom: -33px;
+      left: 197px;
+      top: initial;
+      width: 158px;
+    }
+  }
+
+  &.good-job {
+    top: -95px;
+    width: 200px;
+    z-index: 0;
+
+    @media ($screen-md-up) {
+      bottom: -140px;
+      left: 197px;
+      top: initial;
+      width: 190px;
+    }
+  }
+
 }
 
 .messages {
+  width: 100%;
+
+  @media ($screen-sm-up) {
+    margin: auto;
+    width: 60%;
+  }
+
+  @media ($screen-md-up) {
+    width: 50%;
+  }
 
   ul {
     display: flex;
     flex-flow: column wrap;
+    font-size: 0.9em;
     list-style: none;
   }
 
@@ -92,20 +157,71 @@
     border-radius: 10px;
     line-height: 1.3em;
     margin-top: 5px;
-    padding: 12px 11px 12px;
+    padding: 10px 10px 8px;
   }
 
   &-left {
     background-color: $florence-light-gray;
     justify-self: flex-start;
+    margin-left: 12%;
     text-align: left;
-    width: 80%;
+    width: 70%;
   }
 
   &-right {
     background-color: $florence-med-blue;
     color: $white;
-    width: 20%;
+    margin-left: 75%;
+    position: relative;
     text-align: center;
+    width: 14%;
+
+    &::after {
+      border: 14px solid transparent;
+      bottom: 0;
+      border-bottom: 0;
+      border-left-color: $florence-med-blue;
+      border-right: 0;
+      content: '';
+      height: 0;
+      margin-right: -27px;
+      margin-top: -13.5px;
+      position: absolute;
+      right: 23px;
+      transform: rotate(10deg);
+      width: 0;
+    }
+  }
+}
+
+.recent {
+  position: relative;
+
+  &::before {
+    background: url('../images/florence-avatar.svg') -3px -1px, $florence-yellow no-repeat;
+    background-size: 45px 45px;
+    border-radius: 999px;
+    bottom: -10px;
+    content: '';
+    height: 40px;
+    left: -50px;
+    position: absolute;
+    width: 40px;
+  }
+
+  &::after {
+    border: 14px solid transparent;
+    border-bottom: 0;
+    border-left: 0;
+    border-right-color: $florence-light-gray;
+    bottom: 0;
+    content: '';
+    height: 0;
+    left: -6px;
+    margin-right: -27px;
+    margin-top: -13.5px;
+    position: absolute;
+    transform: rotate(-10deg);
+    width: 0;
   }
 }
