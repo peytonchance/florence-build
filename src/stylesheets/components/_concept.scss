@@ -34,7 +34,11 @@
 
     @media ($screen-md-up) {
       padding: 4%;
-      max-width: 60%;
+      width: 60%;
+    }
+
+    @media ($screen-lg-up) {
+      padding-bottom: 8%;
     }
   }
 }
