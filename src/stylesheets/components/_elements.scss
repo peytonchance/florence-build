@@ -10,6 +10,14 @@ ul {
 a {
   color: $florence-red;
   text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .box {
