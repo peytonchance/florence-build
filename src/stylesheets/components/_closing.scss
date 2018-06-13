@@ -1,0 +1,31 @@
+.closing {
+  color: $florence-blue;
+  margin: auto;
+  position: relative;
+  width: 80%;
+
+  @media ($screen-md-up) {
+    width: 50%;
+  }
+
+  .section-intro {
+    font-size: 2em;
+  }
+
+  p:last-of-type {
+    width: 50%;
+  }
+}
+
+.booklet {
+  display: none;
+
+  @media ($screen-md-up) {
+    display: block;
+    height: 160px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100px, 230px);
+  }
+}
