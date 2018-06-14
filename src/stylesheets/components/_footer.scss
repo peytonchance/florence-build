@@ -1,16 +1,13 @@
 footer {
   background-color: $florence-blue;
   color: $florence-light-blue;
-  min-height: 500px;
   overflow: hidden;
-  padding-top: 50px;
+  padding: 50px 0 150px;
   position: relative;
   text-align: center;
 
   @media ($screen-sm-up) {
-    max-height: 310px;
-    min-height: 300px;
-    padding: 60px 60px;
+    padding: 60px 60px 100px;
   }
 
   h2 {
@@ -22,7 +19,7 @@ footer {
 
   p {
     font-family: $secondary-font;
-    margin: auto;
+    margin: 0 auto 30px;
     width: 80%;
 
     @media ($screen-md-up) {
@@ -35,33 +32,27 @@ footer {
   width: 175px;
 }
 
-.contact {
+a.contact {
   background-color: $florence-blue;
   border: solid 3px $florence-yellow;
   border-radius: 50px;
   color: $florence-yellow;
   font-family: $main-font;
   font-size: 1.1em;
-  height: 50px;
   letter-spacing: 1px;
-  margin: 30px auto;
+  padding: 12px 50px;
+  text-decoration: none;
   text-transform: uppercase;
-  width: 250px;
 }
 
 .footer-florence {
-  left: 25%;
-  margin-top: 90px;
+  left: 50%;
   position: absolute;
+  transform: translate(-100px, 60px);
   width: 230px;
 
   @media ($screen-sm-up) {
-    left: 10%;
-    margin-top: 50px;
-  }
-
-  @media ($screen-lg-up) {
-    margin-top: 80px;
+    transform: translate(-350px, 0);
   }
 }
 

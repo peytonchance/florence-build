@@ -1,6 +1,6 @@
 .closing {
   color: $florence-blue;
-  margin: 0px auto 50px;
+  margin: 0 auto 50px;
   position: relative;
   width: 80%;
 
@@ -12,6 +12,7 @@
   p:last-of-type {
 
     @media ($screen-md-up) {
+      float: left;
       width: 50%;
     }
   }
@@ -28,10 +29,7 @@
   @media ($screen-md-up) {
     display: block;
     height: 160px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(-100px, 250px);
+    transform: translateX(50px);
   }
 }
 
