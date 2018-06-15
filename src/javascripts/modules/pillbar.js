@@ -1,22 +1,28 @@
-var pillbar = document.getElementById('pillbar')
-var lastKnownScrollY = 0
-var ticking = false
+export default class Pillbar {
+  constructor(el) {
+    this.el = el
+    this.ticking = false
+    this.lastScrollY = 0
 
-var togglePillbar = function(scroll_pos) {
-   if (scroll_pos > 480) {
-    pillbar.className = 'pillbar pillbar-fixed'
-  } else {
-    pillbar.className = 'pillbar'
+    window.addEventListener('scroll', () => this.handleScroll())
+  }
+
+  handleScroll() {
+    this.lastScrollY = window.scrollY
+    if (!this.ticking) {
+      window.requestAnimationFrame(() => {
+        this.togglePillbar()
+      })
+    }
+    this.ticking = true;
+  }
+
+  togglePillbar() {
+    this.ticking = false
+    if (this.lastScrollY > 420) {
+      this.el.className = 'pillbar pillbar-fixed'
+    } else {
+      this.el.className = 'pillbar'
+    }
   }
 }
-
-window.addEventListener('scroll', function(e) {
-  lastKnownScrollY = window.scrollY
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      togglePillbar(lastKnownScrollY)
-      ticking = false
-    });
-    ticking = true
-  }
-});
