@@ -14,7 +14,7 @@ export default class Pillbar {
         this.togglePillbar()
       })
     }
-    this.ticking = true;
+    this.ticking = true
   }
 
   togglePillbar() {
