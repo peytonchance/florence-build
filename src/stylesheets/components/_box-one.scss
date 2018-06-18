@@ -2,6 +2,7 @@
 
 .box-one {
   position: relative;
+  margin-top: 175px;
 }
 
 .main-thought {
@@ -29,7 +30,7 @@
   color: $florence-orange;
   font-family: $secondary-font;
   text-align: left;
-  
+
   @media ($screen-sm-up) {
     text-align: center;
   }
@@ -76,7 +77,7 @@
     transform: translate(20%, -20%);
   }
 
-  @media ($screen-sm-up) {  
+  @media ($screen-sm-up) {
     transform: translate(135%, 15%);
   }
 }

@@ -1,9 +1,20 @@
 export default class Pillbar {
   constructor(el) {
     this.el = el
+    this.setVars()
+  }
+
+  setVars(el) {
+    /* Ticking essentially == isRequestingAnimationFrame; I'm leaving
+    it as 'ticking' to follow requestingAnimationFrame convention/docs */
     this.ticking = false
     this.lastScrollY = 0
+    this.el.pillbarOffset = this.el.offsetTop
+    this.setupListeners()
+  }
 
+  setupListeners() {
+    window.addEventListener('resize', () => this.handleResize())
     window.addEventListener('scroll', () => this.handleScroll())
   }
 
@@ -17,12 +28,26 @@ export default class Pillbar {
     this.ticking = true
   }
 
+  handleResize() {
+    clearTimeout(this.timeout)
+    this.timeout = setTimeout(this.getPillbarOffset(), 200)
+  }
+
+  getPillbarOffset() {
+    if(!this.el.isPinned){
+      this.el.pillbarOffset = this.el.offsetTop
+    }
+  }
+
   togglePillbar() {
     this.ticking = false
-    if (this.lastScrollY > 420) {
-      this.el.className = 'pillbar pillbar-fixed'
+
+    if (this.lastScrollY > this.el.pillbarOffset) {
+      this.el.classList.add('pillbar-fixed')
+      this.el.isPinned = true
     } else {
-      this.el.className = 'pillbar'
+      this.el.classList.remove('pillbar-fixed')
+      this.el.isPinned = false
     }
   }
 }
