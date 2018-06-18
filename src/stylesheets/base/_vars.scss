@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: geomanist;
-    src: url(fonts/geomanist-regular-webfont.woff2);
+    src: url(../fonts/geomanist/geomanist-regular-webfont.woff2);
 }
 
 @font-face {
     font-family: geomanist-medium;
-    src: url(fonts/geomanist-medium-webfont.woff2);
+    src: url(../fonts/geomanist-medium/geomanist-medium-webfont.woff2);
 }
 
 $main-font: geomanist, sans-serif;
