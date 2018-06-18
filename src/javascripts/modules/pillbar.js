@@ -2,6 +2,7 @@ export default class Pillbar {
   constructor(el) {
     this.el = el
     this.setVars()
+    this.setupListeners()
   }
 
   setVars(el) {
@@ -10,7 +11,6 @@ export default class Pillbar {
     this.ticking = false
     this.lastScrollY = 0
     this.el.pillbarOffset = this.el.offsetTop
-    this.setupListeners()
   }
 
   setupListeners() {

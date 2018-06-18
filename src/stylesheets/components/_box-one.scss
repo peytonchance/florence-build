@@ -2,7 +2,10 @@
 
 .box-one {
   position: relative;
-  margin-top: 175px;
+
+  @media ($screen-sm-up) {
+    margin-top: 175px;
+  }
 }
 
 .main-thought {
