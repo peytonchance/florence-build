@@ -25,5 +25,5 @@ module.exports = {
 
   production: {
     rev: true
-  }
+  },
 }
