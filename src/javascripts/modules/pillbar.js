@@ -30,7 +30,7 @@ export default class Pillbar {
 
   handleResize() {
     clearTimeout(this.timeout)
-    this.timeout = setTimeout(this.getPillbarOffset(), 200)
+    this.timeout = setTimeout(() => this.getPillbarOffset(), 200)
   }
 
   getPillbarOffset() {
