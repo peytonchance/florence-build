@@ -7,6 +7,10 @@ main {
   padding-top: 50px;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 
 .title-box {
   position: relative;
@@ -86,6 +90,30 @@ main {
   transition: transform 0.2s ease-in-out;
 }
 
+.yellow-tablet {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0.9) translate(300px, 0) rotate(1500deg);
+  width: 60px;
+}
+
+.green-tablet {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0.7) translate(-100px, -200px) rotate(1500deg);
+  width: 50px;
+}
+
+.purple-tablet {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0.9) translate(-200px, -200px) rotate(1500deg);
+  width: 40px;
+}
+
 .pills-animating {
 
   .yellow-pill {
@@ -139,26 +167,130 @@ main {
   }
 }
 
-.yellow-tablet {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: scale(0.9) translate(300px, 0) rotate(1500deg);
-  width: 60px;
+@keyframes shake {
+
+  10%, 90% {
+    transform: rotate(30deg) translate3d(-1px, 0, 0) scale(1);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(10deg) translate3d(-10px, 0, 0) scale(1);
+  }
+
+  40%, 60% {
+    transform: rotate(20deg) translate3d(4px, 0, 0) scale(1);
+  }
 }
 
-.green-tablet {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: scale(0.7) translate(-100px, -200px) rotate(1500deg);
-  width: 50px;
+@keyframes shake2 {
+
+  10%, 90% {
+    transform: rotate(30deg) translate3d(-4px, 0, 0) scale(1);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(30deg) translate3d(10px, 0, 0) scale(1);
+  }
+
+  40%, 60% {
+    transform: rotate(30deg) translate3d(6px, 0, 0) scale(1);
+  }
 }
 
-.purple-tablet {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: scale(0.9) translate(-200px, -200px) rotate(1500deg);
-  width: 40px;
+@keyframes shake3 {
+
+  10%, 90% {
+    transform: rotate(30deg) translate(-150px, 30px) scale(0.95);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(25deg) translate(-150px, 30px) scale(0.95);
+  }
+
+  40%, 60% {
+    transform: rotate(30deg) translate(-150px, 30px) scale(0.95);
+  }
+}
+
+@keyframes shake4 {
+
+  10%, 90% {
+    transform: rotate(30deg) scale(0.8) translate(-325px, 80px);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(28deg) scale(0.8) translate(-325px, 80px);
+  }
+
+  40%, 60% {
+    transform: rotate(30deg) scale(0.8) translate(-325px, 80px);
+  }
+}
+
+@keyframes shake5 {
+
+  10%, 90% {
+    transform: rotate(30deg) scale(0.9) translate(-360px, 105px);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(32deg) scale(0.9) translate(-360px, 105px);
+  }
+
+  40%, 60% {
+    transform: rotate(30deg) scale(0.9) translate(-360px, 105px);
+  }
+}
+
+@keyframes shake6 {
+
+  10%, 90% {
+    transform: rotate(2deg) translate3d(0, 0, 0) scale(1);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(0deg) translate3d(0, 0, 0) scale(1);
+  }
+
+  40%, 60% {
+    transform: rotate(2deg) translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.pills-shaking {
+
+  @media ($screen-sm-up) {
+
+    .yellow-pill {
+      animation: shake 0.6s ease-out;
+    }
+
+    .pills {
+      animation: shake2 0.6s ease-out;
+    }
+
+    .purple-pills {
+      animation: shake 0.6s ease-out;
+    }
+
+    .yellow-tablet {
+      animation: shake3 0.6s ease-out;
+    }
+
+    .green-tablet {
+      animation: shake4 0.6s ease-out;
+    }
+
+    .purple-tablet {
+      animation: shake5 0.6s ease-in-out;
+    }
+
+    .title-pill-red {
+      animation: shake6 0.6s ease-in-out;
+    }
+
+    .title-tablet {
+      animation: shake6 0.6s ease-in-out;
+    }
+  }
 }
