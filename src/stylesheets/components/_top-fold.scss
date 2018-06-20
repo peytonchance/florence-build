@@ -167,94 +167,28 @@ main {
   }
 }
 
-@keyframes shake {
-
-  10%, 90% {
-    transform: rotate(30deg) translate3d(-1px, 0, 0) scale(1);
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(10deg) translate3d(-10px, 0, 0) scale(1);
-  }
-
-  40%, 60% {
-    transform: rotate(20deg) translate3d(4px, 0, 0) scale(1);
-  }
+@include keyframes(shake) {
+  @include shake(30deg, 20deg, 30deg, 1, -1px, -10px, 4px)
 }
 
-@keyframes shake2 {
-
-  10%, 90% {
-    transform: rotate(30deg) translate3d(-4px, 0, 0) scale(1);
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(30deg) translate3d(10px, 0, 0) scale(1);
-  }
-
-  40%, 60% {
-    transform: rotate(30deg) translate3d(6px, 0, 0) scale(1);
-  }
+@include keyframes(shake2) {
+  @include shake(30deg, 30deg, 30deg, 1, -4px, 10px, 6px)
 }
 
-@keyframes shake3 {
-
-  10%, 90% {
-    transform: rotate(30deg) translate(-150px, 30px) scale(0.95);
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(25deg) translate(-150px, 30px) scale(0.95);
-  }
-
-  40%, 60% {
-    transform: rotate(30deg) translate(-150px, 30px) scale(0.95);
-  }
+@include keyframes(shake3) {
+  @include shake2d(30deg, 28deg, 30deg, 0.95, -150px, 30px)
 }
 
-@keyframes shake4 {
-
-  10%, 90% {
-    transform: rotate(30deg) scale(0.8) translate(-325px, 80px);
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(28deg) scale(0.8) translate(-325px, 80px);
-  }
-
-  40%, 60% {
-    transform: rotate(30deg) scale(0.8) translate(-325px, 80px);
-  }
+@include keyframes(shake4) {
+  @include shake2d(30deg, 28deg, 30deg, 0.8, -325px, 90px)
 }
 
-@keyframes shake5 {
-
-  10%, 90% {
-    transform: rotate(30deg) scale(0.9) translate(-360px, 105px);
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(32deg) scale(0.9) translate(-360px, 105px);
-  }
-
-  40%, 60% {
-    transform: rotate(30deg) scale(0.9) translate(-360px, 105px);
-  }
+@include keyframes(shake5) {
+  @include shake2d(28deg, 30deg, 29deg, 0.9, -360px, 105px)
 }
 
-@keyframes shake6 {
-
-  10%, 90% {
-    transform: rotate(2deg) translate3d(0, 0, 0) scale(1);
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(0deg) translate3d(0, 0, 0) scale(1);
-  }
-
-  40%, 60% {
-    transform: rotate(2deg) translate3d(0, 0, 0) scale(1);
-  }
+@include keyframes(shake6) {
+  @include shake(2deg, 0deg, 2deg, 1, 0, 0, 0)
 }
 
 .pills-shaking {
@@ -262,35 +196,35 @@ main {
   @media ($screen-sm-up) {
 
     .yellow-pill {
-      animation: shake 0.6s ease-out;
+      @include animation(shake);
     }
 
     .pills {
-      animation: shake2 0.6s ease-out;
+      @include animation(shake2);
     }
 
     .purple-pills {
-      animation: shake 0.6s ease-out;
+      @include animation(shake);
     }
 
     .yellow-tablet {
-      animation: shake3 0.6s ease-out;
+      @include animation(shake3);
     }
 
     .green-tablet {
-      animation: shake4 0.6s ease-out;
+      @include animation(shake4);
     }
 
     .purple-tablet {
-      animation: shake5 0.6s ease-in-out;
+      @include animation(shake5);
     }
 
     .title-pill-red {
-      animation: shake6 0.6s ease-in-out;
+      @include animation(shake6);
     }
 
     .title-tablet {
-      animation: shake6 0.6s ease-in-out;
+      @include animation(shake6);
     }
   }
 }

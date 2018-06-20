@@ -1,0 +1,41 @@
+@mixin animation($name, $duration: 0.6s, $easing: ease-in-out) {
+  -webkit-animation: $name $duration;
+  -moz-animation: $name $duration;
+  animation: $name $duration;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin shake($rotate1, $rotate2, $rotate3, $scale, $tx1, $tx2, $tx3) {
+
+  10%, 90% {
+    transform: rotate($rotate1) scale($scale) translate3d($tx1, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate($rotate2) scale($scale) translate3d($tx2, 0, 0);
+  }
+
+  40%, 60% {
+    transform: rotate($rotate3) scale($scale) translate3d($tx3, 0, 0);
+  }
+}
+
+@mixin shake2d($rotate1, $rotate2, $rotate3, $scale, $translateX, $translateY) {
+
+  10%, 90% {
+    transform: rotate($rotate1) scale($scale) translate($translateX, $translateY);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate($rotate2) scale($scale) translate($translateX, $translateY);
+  }
+
+  40%, 60% {
+    transform: rotate($rotate3) scale($scale) translate($translateX, $translateY);
+  }
+}
