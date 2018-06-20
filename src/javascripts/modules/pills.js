@@ -35,10 +35,7 @@ export default class Pills {
   }
 
   releasePillSqueeze() {
-    var titlePill = this.el.children[1].children[0].children[0].children[0]
-    if (titlePill.classList.contains('title-pill-red-bounce')) {
-      titlePill.classList.remove('title-pill-red-bounce')
-    }
+    this.el.querySelector('.title-pill-red-bounce').classList.remove('title-pill-red-bounce')
   }
 
   shakePills() {
