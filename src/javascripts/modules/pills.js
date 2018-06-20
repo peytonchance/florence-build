@@ -42,11 +42,13 @@ export default class Pills {
     this.ticking = false
 
     if (this.lastScrollY === 0) {
-      this.el.classList.add('pills-shaking')
-      this.el.parentNode.classList.add('overflow-visible')
-    } else {
-      this.el.classList.remove('pills-shaking')
-      this.el.parentNode.classList.remove('overflow-visible')
+
+      if (!this.el.classList.contains('pills-shake-in')) {
+        this.el.classList.add('pills-shake-in')
+      } else if (this.el.classList.contains('pills-shake-in')) {
+        this.el.classList.remove('pills-shake-in')
+      }
+      this.el.parentNode.style.overflow = 'visible'
     }
   }
 }
