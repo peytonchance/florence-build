@@ -10,7 +10,7 @@ export default class Pills {
 
   handleLoad() {
     this.timeout = setTimeout(() => this.animatePills(), 500)
-    this.releaseSqueezeTimeout = setTimeout(() => this.releasePillSqueeze(), 4500)
+    this.releaseSqueezeTimeout = setTimeout(() => this.releasePillSqueeze(), 3500)
   }
 
   animatePills() {
@@ -18,9 +18,9 @@ export default class Pills {
   }
 
   releasePillSqueeze() {
-    var tempPill = this.el.children[1].children[0].children[0].children[0]
-    if (tempPill.classList.contains('title-pill-red-bounce')) {
-      tempPill.classList.remove('title-pill-red-bounce')
+    var titlePill = this.el.children[1].children[0].children[0].children[0]
+    if (titlePill.classList.contains('title-pill-red-bounce')) {
+      titlePill.classList.remove('title-pill-red-bounce')
     }
   }
 }
