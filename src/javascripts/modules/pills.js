@@ -24,7 +24,7 @@ export default class Pills {
     this.lastScrollY = window.scrollY
     if (!this.ticking) {
       window.requestAnimationFrame(() => {
-        this.shakePills()
+        this.shiftPills()
       })
     }
     this.ticking = true
@@ -38,15 +38,15 @@ export default class Pills {
     this.el.querySelector('.title-pill-red-bounce').classList.remove('title-pill-red-bounce')
   }
 
-  shakePills() {
+  shiftPills() {
     this.ticking = false
 
     if (this.lastScrollY === 0) {
 
-      if (!this.el.classList.contains('pills-shake-in')) {
-        this.el.classList.add('pills-shake-in')
-      } else if (this.el.classList.contains('pills-shake-in')) {
-        this.el.classList.remove('pills-shake-in')
+      if (!this.el.classList.contains('pills-move-in')) {
+        this.el.classList.add('pills-move-in')
+      } else if (this.el.classList.contains('pills-move-in')) {
+        this.el.classList.remove('pills-move-in')
       }
       this.el.parentNode.style.overflow = 'visible'
     }

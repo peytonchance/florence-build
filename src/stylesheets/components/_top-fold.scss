@@ -7,11 +7,6 @@ main {
   padding-top: 50px;
 }
 
-.overflow-visible {
-  overflow: visible;
-}
-
-
 .title-box {
   position: relative;
 }
@@ -168,12 +163,12 @@ main {
   }
 
   .green-tablet-left {
-    transform: scale(1) translate(0,0) rotate(0);
+    transform: scale(1) translate(0,0) rotate(0deg);
     transition: transform 2.5s ease-out;
   }
 
   .yellow-tablet-left {
-    transform: scale(1) translate(0,0) rotate(0);
+    transform: scale(1) translate(0,0) rotate(0deg);
     transition: transform 2.5s ease-out;
   }
 
@@ -196,31 +191,31 @@ main {
     transform: translate(60px, -30px);
 
     @media ($screen-sm-up) {
-      transform: scale(0.95) translate(-150px, -30px) rotate(0);
+      transform: scale(0.95) translate(-150px, -30px) rotate(0deg);
       transition: transform 3s;
     }
   }
 
   .green-tablet {
-    transform: scale(0.8) translate(-50px, -110px) rotate(0);
+    transform: scale(0.8) translate(-50px, -110px) rotate(0deg);
 
     @media ($screen-sm-up) {
-      transform: scale(0.8) translate(-320px, -70px) rotate(0);
+      transform: scale(0.8) translate(-320px, -70px) rotate(0deg);
       transition: transform 2s;
     }
   }
 
   .purple-tablet {
-    transform: scale(0.9) translate(10px, -50px) rotate(0);
+    transform: scale(0.9) translate(10px, -50px) rotate(0deg);
 
     @media ($screen-sm-up) {
-      transform: scale(0.9) translate(-360px, -90px) rotate(0);
+      transform: scale(0.9) translate(-360px, -90px) rotate(0deg);
       transition: transform 3.2s;
     }
   }
 }
 
-.pills-shake-in {
+.pills-move-in {
 
   @media ($screen-sm-up) {
 
