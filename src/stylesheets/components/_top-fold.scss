@@ -86,29 +86,33 @@ main {
 }
 
 .purple-pill-left {
+  bottom: -70px;
+  height: 140px;
   position: absolute;
-  right: -75px;
-  top: 160px;
-  width: 9em;
+  right: -25px;
+  transform-origin: 60px 95px;
+  width: 105px;
   z-index: 4;
 
   @media ($screen-sm-up) {
-    right: 100px;
+    right: 200px;
     top: 350px;
     transform: scale(1.5) translate(300%, 10%) rotate(1720deg);
   }
 
   @media ($screen-md-up) {
-    right: 100px;
+    right: 170px;
     top: 380px;
   }
 }
 
 .purple-pill-right {
+  bottom: -100px;
+  height: 130px;
   position: absolute;
-  right: -75px;
-  top: 160px;
-  width: 9em;
+  right: -100px;
+  transform-origin: 170px 50px;
+  width: 200px;
   z-index: 4;
 
   @media ($screen-sm-up) {
@@ -118,7 +122,7 @@ main {
   }
 
   @media ($screen-md-up) {
-    right: 100px;
+    right: 120px;
     top: 380px;
   }
 }
@@ -173,7 +177,12 @@ main {
     transition: transform 2.5s ease-out;
   }
 
-  .purple-pills {
+  .purple-pill-left {
+    transform: scale(1) translate(0,0) rotate(0deg);
+    transition: transform 2s ease-out;
+  }
+
+  .purple-pill-right {
     transform: scale(1) translate(0,0) rotate(0deg);
     transition: transform 2s ease-out;
   }
@@ -213,48 +222,56 @@ main {
 
 .pills-shake-in {
 
-  .yellow-pill {
-    transform: scale(1) translate(-10px, 10px) rotate(120deg);
-    transition: transform 1s ease-out;
-  }
+  @media ($screen-sm-up) {
 
-  .green-tablet-left {
-    transform: scale(1) translate(-10px, 10px) rotate(-60deg);
-    transition: transform 1s ease-out;
-  }
+    .yellow-pill {
+      transform: scale(1) translate(-10px, 10px) rotate(120deg);
+      transition: transform 1s ease-out;
+    }
 
-  .yellow-tablet-left {
-    transform: scale(1) translate(-10px, 10px) rotate(-60deg);
-    transition: transform 1s ease-out;
-  }
+    .green-tablet-left {
+      transform: scale(1) translate(-10px, 10px) rotate(-60deg);
+      transition: transform 1s ease-out;
+    }
 
-  .purple-pills {
-    transform: scale(1) translate(-20px, 5px) rotate(60deg);
-    transition: transform 1s ease-out;
-  }
+    .yellow-tablet-left {
+      transform: scale(1) translate(-10px, 10px) rotate(-60deg);
+      transition: transform 1s ease-out;
+    }
 
-  .yellow-tablet {
-    transform: scale(0.95) translate(-170px, -10px) rotate(-60deg);
-    transition: transform 1s ease-out;
-  }
+    .purple-pill-right {
+      transform: scale(1) translate(-20px, 5px) rotate(60deg);
+      transition: transform 1s ease-out;
+    }
 
-  .green-tablet {
-    transform: scale(0.8) translate(-340px, -90px) rotate(70deg);
-    transition: transform 1s;
-  }
+    .purple-pill-left {
+      transform: scale(1) translate(-10px, 2px) rotate(60deg);
+      transition: transform 1s ease-out;
+    }
 
-  .purple-tablet {
-    transform: scale(0.9) translate(-380px, -100px) rotate(100deg);
-    transition: transform 1s;
-  }
+    .yellow-tablet {
+      transform: scale(0.95) translate(-170px, -10px) rotate(-60deg);
+      transition: transform 1s ease-out;
+    }
 
-  .title-pill-red {
-    transform: scale(1) rotate(12deg);
-    transition: transform 1s ease-in-out;
-  }
+    .green-tablet {
+      transform: scale(0.8) translate(-340px, -90px) rotate(70deg);
+      transition: transform 1s;
+    }
 
-  .title-tablet {
-    transform: translate(1px, 10px) rotate(60deg);
-    transition: transform 1s;
+    .purple-tablet {
+      transform: scale(0.9) translate(-380px, -100px) rotate(100deg);
+      transition: transform 1s;
+    }
+
+    .title-pill-red {
+      transform: scale(1) rotate(12deg);
+      transition: transform 1s ease-in-out;
+    }
+
+    .title-tablet {
+      transform: translate(1px, 10px) rotate(60deg);
+      transition: transform 1s;
+    }
   }
 }
