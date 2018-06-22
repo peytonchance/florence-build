@@ -1,18 +1,12 @@
 export default class Pills {
   constructor(el) {
     this.el = el
-    this.setVars()
     this.setupListeners()
-  }
-
-  setVars() {
-    this.ticking = false
-    this.lastScrollY = 0
   }
 
   setupListeners() {
     window.addEventListener('load', () => this.handleLoad())
-    window.addEventListener('scroll', () => this.handleScroll())
+    this.createObserver()
   }
 
   handleLoad() {
@@ -20,15 +14,31 @@ export default class Pills {
     this.releaseSqueezeTimeout = setTimeout(() => this.releasePillSqueeze(), 3500)
   }
 
-  handleScroll() {
-    this.lastScrollY = window.scrollY
-    if (!this.ticking) {
-      window.requestAnimationFrame(() => {
-        this.shiftPills()
+  createObserver() {
+    this.observer
+
+    this.options = {
+      root: null,
+      rootMargin: "20px",
+      threshold: 0,
+    }
+
+    this.observer = new IntersectionObserver(this.handleIntersect, this.options)
+    this.observer.observe(document.querySelector('.green-tablet'))
+  }
+
+  handleIntersect(entries, observer) {
+    var titleBox = document.querySelector('.title-box')
+    entries.forEach(function(entry) {
+        if (entry.time < 7000) {
+          //preventing pill shift animation onLoad
+        } else if (entry.intersectionRatio > 0 && !titleBox.classList.contains('pills-move-in')) {
+          titleBox.classList.add('pills-move-in')
+        } else if (entry.intersectionRatio > 0 && titleBox.classList.contains('pills-move-in')) {
+          titleBox.classList.remove('pills-move-in')
+        }
       })
     }
-    this.ticking = true
-  }
 
   animatePills() {
     this.el.classList.add('pills-animating')
@@ -37,19 +47,4 @@ export default class Pills {
   releasePillSqueeze() {
     this.el.querySelector('.title-pill-red-bounce').classList.remove('title-pill-red-bounce')
   }
-
-  shiftPills() {
-    this.ticking = false
-
-    if (this.lastScrollY === 0) {
-
-      if (!this.el.classList.contains('pills-move-in')) {
-        this.el.classList.add('pills-move-in')
-      } else if (this.el.classList.contains('pills-move-in')) {
-        this.el.classList.remove('pills-move-in')
-      }
-      this.el.parentNode.style.overflow = 'visible'
-    }
-  }
 }
-

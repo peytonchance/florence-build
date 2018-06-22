@@ -1,53 +1,33 @@
 export default class Pillbar {
   constructor(el) {
     this.el = el
-    this.setVars()
-    this.setupListeners()
+    this.createObserver()
   }
 
-  setVars(el) {
-    /* Ticking essentially == isRequestingAnimationFrame; I'm leaving
-    it as 'ticking' to follow requestingAnimationFrame convention/docs */
-    this.ticking = false
-    this.lastScrollY = 0
-    this.el.pillbarOffset = this.el.offsetTop
-  }
+  createObserver() {
+    this.observer
 
-  setupListeners() {
-    window.addEventListener('resize', () => this.handleResize())
-    window.addEventListener('scroll', () => this.handleScroll())
-  }
-
-  handleScroll() {
-    this.lastScrollY = window.scrollY
-    if (!this.ticking) {
-      window.requestAnimationFrame(() => {
-        this.togglePillbar()
-      })
+    this.options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0,
     }
-    this.ticking = true
+
+    this.observer = new IntersectionObserver(this.handleIntersect, this.options)
+    this.observer.observe(document.querySelector('.title-box'))
   }
 
-  handleResize() {
-    clearTimeout(this.timeout)
-    this.timeout = setTimeout(() => this.getPillbarOffset(), 200)
-  }
-
-  getPillbarOffset() {
-    if(!this.el.isPinned){
-      this.el.pillbarOffset = this.el.offsetTop
-    }
-  }
-
-  togglePillbar() {
-    this.ticking = false
-
-    if (this.lastScrollY > this.el.pillbarOffset) {
-      this.el.classList.add('pillbar-fixed')
-      this.el.isPinned = true
-    } else {
-      this.el.classList.remove('pillbar-fixed')
-      this.el.isPinned = false
-    }
+  handleIntersect(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.intersectionRatio > 0 && !entry.isRequestingAnimationFrame) {
+        window.requestAnimationFrame(() => {
+          document.querySelector('.pillbar').classList.remove('pillbar-fixed')
+        })
+      } else if (entry.intersectionRatio <= 0 && !entry.isRequestingAnimationFrame) {
+        window.requestAnimationFrame(() => {
+          document.querySelector('.pillbar').classList.add('pillbar-fixed')
+        })
+      }
+    })
   }
 }
