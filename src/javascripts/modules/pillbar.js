@@ -23,18 +23,11 @@ export default class Pillbar {
 
   handleIntersect(entries, observer) {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0 && !entry.isRequestingAnimationFrame) {
-        window.requestAnimationFrame(() => {
+      if (entry.intersectionRatio > 0) {
           this.pillbar.classList.remove('pillbar-fixed')
-          entry.isRequestingAnimationFrame = true
-        })
-      } else if (entry.intersectionRatio <= 0 && !entry.isRequestingAnimationFrame) {
-        window.requestAnimationFrame(() => {
+      } else if (entry.intersectionRatio <= 0) {
          this.pillbar.classList.add('pillbar-fixed')
-         entry.isRequestingAnimationFrame = true
-        })
       }
-      entry.isRequestingAnimationFrame = false
     })
   }
 }
