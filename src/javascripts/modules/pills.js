@@ -6,6 +6,7 @@ export default class Pills {
   }
 
   setVars() {
+    this.firstIntersection = true
     this.titleBox = document.querySelector('.title-box')
     this.greenTablet = document.querySelector('.green-tablet')
   }
@@ -33,20 +34,14 @@ export default class Pills {
 
   handleIntersect(entries, observer) {
     entries.forEach((entry) => {
-      if (entry.time < 6000) {
+      if (this.firstIntersection) {
         //preventing pill shift animation onLoad
-      } else if (entry.intersectionRatio > 0 && !this.titleBox.classList.contains('pills-move-in') && !entry.isRequestingAnimationFrame) {
-        window.requestAnimationFrame(() => {
+      } else if (entry.intersectionRatio > 0 && !this.titleBox.classList.contains('pills-move-in')) {
           this.titleBox.classList.add('pills-move-in')
-          entry.isRequestingAnimationFrame = true
-        })
-      } else if (entry.intersectionRatio > 0 && this.titleBox.classList.contains('pills-move-in') && !entry.isRequestingAnimationFrame) {
-        window.requestAnimationFrame(() => {
+      } else if (entry.intersectionRatio > 0 && this.titleBox.classList.contains('pills-move-in')) {
           this.titleBox.classList.remove('pills-move-in')
-          entry.isRequestingAnimationFrame = true
-        })
       }
-      entry.isRequestingAnimationFrame = false
+      this.firstIntersection = false
     })
   }
 
