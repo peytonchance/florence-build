@@ -1,7 +1,13 @@
 export default class Pills {
   constructor(el) {
     this.el = el
+    this.setVars()
     this.setupListeners()
+  }
+
+  setVars() {
+    this.titleBox = document.querySelector('.title-box')
+    this.greenTablet = document.querySelector('.green-tablet')
   }
 
   setupListeners() {
@@ -15,30 +21,34 @@ export default class Pills {
   }
 
   createObserver() {
-    this.observer
-
     this.options = {
       root: null,
       rootMargin: "20px",
       threshold: 0,
     }
 
-    this.observer = new IntersectionObserver(this.handleIntersect, this.options)
-    this.observer.observe(document.querySelector('.green-tablet'))
+    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), this.options)
+    this.observer.observe(this.greenTablet)
   }
 
   handleIntersect(entries, observer) {
-    var titleBox = document.querySelector('.title-box')
-    entries.forEach(function(entry) {
-        if (entry.time < 7000) {
-          //preventing pill shift animation onLoad
-        } else if (entry.intersectionRatio > 0 && !titleBox.classList.contains('pills-move-in')) {
-          titleBox.classList.add('pills-move-in')
-        } else if (entry.intersectionRatio > 0 && titleBox.classList.contains('pills-move-in')) {
-          titleBox.classList.remove('pills-move-in')
-        }
-      })
-    }
+    entries.forEach((entry) => {
+      if (entry.time < 6000) {
+        //preventing pill shift animation onLoad
+      } else if (entry.intersectionRatio > 0 && !this.titleBox.classList.contains('pills-move-in') && !entry.isRequestingAnimationFrame) {
+        window.requestAnimationFrame(() => {
+          this.titleBox.classList.add('pills-move-in')
+          entry.isRequestingAnimationFrame = true
+        })
+      } else if (entry.intersectionRatio > 0 && this.titleBox.classList.contains('pills-move-in') && !entry.isRequestingAnimationFrame) {
+        window.requestAnimationFrame(() => {
+          this.titleBox.classList.remove('pills-move-in')
+          entry.isRequestingAnimationFrame = true
+        })
+      }
+      entry.isRequestingAnimationFrame = false
+    })
+  }
 
   animatePills() {
     this.el.classList.add('pills-animating')
