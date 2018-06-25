@@ -57,13 +57,14 @@
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
+
 /*-------- Demo Styles -------*/
 
 .demo {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  margin: 70px 0;
+  margin: 70px auto;
   position: relative;
 
   @media ($screen-md-up) {
@@ -88,12 +89,18 @@
   }
 
   &-two {
+    margin-top: 120px;
 
     @media ($screen-md-up) {
       overflow: hidden;
     }
 
   }
+}
+
+.demos-wrapper {
+  margin: auto;
+  width: 100%;
 }
 
 .explain {
@@ -279,5 +286,65 @@
     position: absolute;
     transform: rotate(-5deg);
     width: 0;
+  }
+}
+
+.demo {
+
+  #msg-one {
+    opacity: 0;
+  }
+
+  #msg-two {
+    opacity: 0;
+  }
+
+  #msg-three {
+    opacity: 0;
+  }
+
+  #msg-four {
+    opacity: 0;
+  }
+
+  #msg-five {
+    opacity: 0;
+  }
+
+  #msg-six {
+    opacity: 0;
+  }
+}
+
+.messages-appearing.messages {
+
+  #msg-one {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  #msg-two {
+    opacity: 1;
+    transition: opacity 1s 3s;
+  }
+
+  #msg-three {
+    opacity: 1;
+    transition: opacity 1s 5s;
+  }
+
+  #msg-four {
+    opacity: 1;
+    transition: opacity 1s 8s;
+  }
+
+  #msg-five {
+    opacity: 1;
+    transition: opacity 1s 10s;
+  }
+
+  #msg-six {
+    opacity: 1;
+    transition: opacity 1s 12s;
   }
 }

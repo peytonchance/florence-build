@@ -25,7 +25,6 @@ export default class Nurse {
   handleIntersect(entries, options) {
     entries.forEach((entry) => {
       if (!this.hasAppeared && entry.intersectionRatio > 0) {
-        console.log('triggered')
         this.florenceCharacter.classList.add('florence-move-in')
         this.hasAppeared = true
       }
