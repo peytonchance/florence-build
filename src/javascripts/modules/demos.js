@@ -30,7 +30,6 @@ export default class Demos {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
         entry.target.classList.add('messages-appearing')
-        entry.target.classList.add('florence-disappearing')
         this.hasAppeared = true
       }
     })
