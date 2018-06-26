@@ -188,6 +188,7 @@
     margin-left: 12%;
     text-align: left;
     width: 70%;
+    position: relative;
   }
 
   &-right {
@@ -236,22 +237,21 @@
   }
 }
 
-.recent {
-  position: relative;
-  z-index: 4;
+.avatar-left::before {
+  background: url('../images/florence-avatar.svg') -3px -1px, $florence-yellow no-repeat;
+  background-size: 45px 45px;
+  border-radius: 999px;
+  bottom: -10px;
+  content: '';
+  height: 40px;
+  left: -50px;
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+}
 
-  & .avatar-left::before {
-    background: url('../images/florence-avatar.svg') -3px -1px, $florence-yellow no-repeat;
-    background-size: 45px 45px;
-    border-radius: 999px;
-    bottom: -10px;
-    content: '';
-    height: 40px;
-    left: -50px;
-    position: absolute;
-    width: 40px;
-    z-index: 1;
-  }
+.recent {
+  z-index: 4;
 
   &::before {
     border: 14px solid transparent;
@@ -314,6 +314,14 @@
   #msg-six {
     opacity: 0;
   }
+
+  #msg-seven {
+    opacity: 0;
+  }
+
+  #msg-eight {
+    opacity: 0;
+  }
 }
 
 .messages-appearing.messages {
@@ -335,16 +343,61 @@
 
   #msg-four {
     opacity: 1;
-    transition: opacity 1s 8s;
+    transition: opacity 1s 9s;
   }
 
   #msg-five {
     opacity: 1;
-    transition: opacity 1s 10s;
+    transition: opacity 1s 13s;
   }
 
   #msg-six {
     opacity: 1;
-    transition: opacity 1s 12s;
+    transition: opacity 1s 15s;
+  }
+
+  #msg-seven {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  #msg-eight {
+    opacity: 1;
+    transition: opacity 1s 3s;
+  }
+}
+
+.florence-disappearing.messages {
+
+  #msg-one {
+
+    span::before {
+      opacity: 0;
+      transition: opacity 0.5s 5s;
+    }
+  }
+
+  #msg-three {
+
+    span::before {
+      opacity: 0;
+      transition: opacity 0.5s 9s;
+    }
+  }
+
+  #msg-four {
+
+    span::before {
+      opacity: 0;
+      transition: opacity 0.5s 13s;
+    }
+  }
+
+  #msg-seven {
+
+    span::before {
+      opacity: 0;
+      transition: opacity 0.5s 3s;
+    }
   }
 }

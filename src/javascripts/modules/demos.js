@@ -9,6 +9,7 @@ export default class Demos {
     this.hasAppeared = false
     this.demoOne = document.querySelector('.demo-one .messages')
     this.demoTwo = document.querySelector('.demo-two .messages')
+    this.messagesLeft = document.querySelectorAll('.message-left')
   }
 
   createObserver() {
@@ -29,6 +30,7 @@ export default class Demos {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
         entry.target.classList.add('messages-appearing')
+        entry.target.classList.add('florence-disappearing')
         this.hasAppeared = true
       }
     })
