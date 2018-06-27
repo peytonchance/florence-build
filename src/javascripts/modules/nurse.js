@@ -12,13 +12,13 @@ export default class Nurse {
   }
 
   createObserver() {
-    this.options = {
+    var options = {
       root: null,
       rootMargin: "0px",
       threshold: 0.5,
     }
 
-    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), this.options)
+    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), options)
     this.observer.observe(this.florenceCharacter)
   }
 
