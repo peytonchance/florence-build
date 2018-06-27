@@ -14,15 +14,15 @@ export default class Demos {
 
   createObserver() {
 
-    this.options = {
+    var options = {
       root: null,
       rootMargin: "0px",
       threshold: 0.5
     }
 
-    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), this.options)
+    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), options)
     this.observer.observe(this.demoOne)
-    this.observerTwo = new IntersectionObserver(this.handleIntersect.bind(this), this.options)
+    this.observerTwo = new IntersectionObserver(this.handleIntersect.bind(this), options)
     this.observerTwo.observe(this.demoTwo)
   }
 

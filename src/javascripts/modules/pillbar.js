@@ -11,13 +11,13 @@ export default class Pillbar {
   }
 
   createObserver() {
-    this.options = {
+    var options = {
       root: null,
       rootMargin: "0px",
       threshold: 0,
     }
 
-    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), this.options)
+    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), options)
     this.observer.observe(this.titleBox)
   }
 

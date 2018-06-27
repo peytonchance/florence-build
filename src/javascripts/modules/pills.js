@@ -22,13 +22,13 @@ export default class Pills {
   }
 
   createObserver() {
-    this.options = {
+    var options = {
       root: null,
       rootMargin: "20px",
       threshold: 0,
     }
 
-    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), this.options)
+    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), options)
     this.observer.observe(this.greenTablet)
   }
 

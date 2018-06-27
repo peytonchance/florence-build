@@ -186,9 +186,9 @@
     background-color: $florence-light-gray;
     justify-self: flex-start;
     margin-left: 12%;
+    position: relative;
     text-align: left;
     width: 70%;
-    position: relative;
   }
 
   &-right {
@@ -291,34 +291,13 @@
 
 .demo {
 
-  #msg-one {
-    opacity: 0;
-  }
-
-  #msg-two {
-    opacity: 0;
-  }
-
-  #msg-three {
-    opacity: 0;
-  }
-
-  #msg-four {
-    opacity: 0;
-  }
-
-  #msg-five {
-    opacity: 0;
-  }
-
-  #msg-six {
-    opacity: 0;
-  }
-
-  #msg-seven {
-    opacity: 0;
-  }
-
+  #msg-one,
+  #msg-two,
+  #msg-three,
+  #msg-four,
+  #msg-five,
+  #msg-six,
+  #msg-seven,
   #msg-eight {
     opacity: 0;
   }
