@@ -3,6 +3,8 @@
   specifying module file-names.
 */
 
+require('intersection-observer');
+
 const moduleElements = document.querySelectorAll('[data-module]')
 
 for (var i = 0; i < moduleElements.length; i++) {
