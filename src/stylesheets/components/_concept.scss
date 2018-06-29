@@ -69,8 +69,12 @@
 
 .florence-move-in {
   opacity: 1;
-  transform: translateX(18px) scale(1);
+  transform: translateX(42px) scale(1);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+  @media ($screen-sm-up) {
+    transform: translateX(35px) scale(1);
+  }
 }
 
 
