@@ -157,29 +157,62 @@ main {
   .yellow-pill {
 
     @media($screen-sm-up) {
-      transform: scale(1) translateX(0) rotate(40deg);
+      transform: scale(1) translateX(-100%) rotate(40deg);
       transition: transform 2s ease-out;
+    }
+
+    @media($screen-md-up) {
+      transform: scale(1) translateX(0) rotate(40deg);
     }
   }
 
   .green-tablet-left {
-    transform: scale(1) translate(0,0) rotate(0deg);
-    transition: transform 2.5s ease-out;
+
+    @media ($screen-sm-up) {
+      transform: scale(1) translate(-50%, -20%) rotate(0deg);
+      transition: transform 2.5s ease-out;
+    }
+
+    @media ($screen-md-up) {
+      transform: scale(1) translate(0,0) rotate(0deg);
+    }
   }
 
   .yellow-tablet-left {
-    transform: scale(1) translate(0,0) rotate(0deg);
-    transition: transform 2.5s ease-out;
+
+    @media ($screen-sm-up) {
+      transform: scale(1) translate(-50%, -20%) rotate(0deg);
+      transition: transform 2.5s ease-out;
+    }
+
+    @media($screen-md-up) {
+      transform: scale(1) translate(0,0) rotate(0deg);
+    }
   }
 
   .purple-pill-left {
-    transform: scale(1) translate(0,0) rotate(0deg);
-    transition: transform 2s ease-out;
+
+    @media ($screen-sm-up) {
+      transform: scale(1) translate(150%, -50%) rotate(0deg);
+      transition: transform 2s ease-out;
+    }
+
+    @media ($screen-md-up) {
+      transform: scale(1) translate(0,0) rotate(0deg);
+    }
+
   }
 
   .purple-pill-right {
-    transform: scale(1) translate(0,0) rotate(0deg);
-    transition: transform 2s ease-out;
+
+    @media ($screen-sm-up) {
+      transform: scale(1) translate(50%, -60%) rotate(0deg);
+      transition: transform 2s ease-out;
+    }
+
+    @media ($screen-md-up) {
+      transform: scale(1) translate(0,0) rotate(0deg);
+    }
   }
 
   .title-pill-red-bounce {
@@ -191,8 +224,12 @@ main {
     transform: translate(60px, -30px);
 
     @media ($screen-sm-up) {
-      transform: scale(0.95) translate(-150px, -30px) rotate(0deg);
+      transform: scale(0.95) translate(-75px, -30px) rotate(0deg);
       transition: transform 3s;
+    }
+
+    @media ($screen-md-up) {
+      transform: scale(0.95) translate(-150px, -30px) rotate(0deg);
     }
   }
 
@@ -200,8 +237,12 @@ main {
     transform: scale(0.8) translate(-50px, -110px) rotate(0deg);
 
     @media ($screen-sm-up) {
-      transform: scale(0.8) translate(-320px, -70px) rotate(0deg);
+      transform: scale(0.8) translate(-200px, -70px) rotate(0deg);
       transition: transform 2s;
+    }
+
+    @media ($screen-md-up) {
+      transform: scale(0.8) translate(-320px, -70px) rotate(0deg);
     }
   }
 
@@ -209,15 +250,19 @@ main {
     transform: scale(0.9) translate(10px, -50px) rotate(0deg);
 
     @media ($screen-sm-up) {
-      transform: scale(0.9) translate(-360px, -90px) rotate(0deg);
+      transform: scale(0.9) translate(-240px, -90px) rotate(0deg);
       transition: transform 3.2s;
+    }
+
+    @media ($screen-md-up) {
+      transform: scale(0.9) translate(-360px, -90px) rotate(0deg);
     }
   }
 }
 
 .pills-move-in {
 
-  @media ($screen-sm-up) {
+  @media ($screen-md-up) {
 
     .yellow-pill {
       transform: scale(1) translate(-10px, 10px) rotate(120deg);
